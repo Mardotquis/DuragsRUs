@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__name {
+    font-family: 'Libre Barcode 128 Text', cursive;
+  font-size: 5em;
+  width: 240px;
+
+}
+
+.header__icon {
+  background-image: url("../img/goaticon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+
+} //GOAT ICON FOR NAV BAR
+.header__extralinks{
+    width: 240px;
+    text-align: right;
+    font-family: 'Baloo Tammudu', cursive;
+    a {
+        text-decoration: none;
+        // color: $browngold;
+    }
+}
+
