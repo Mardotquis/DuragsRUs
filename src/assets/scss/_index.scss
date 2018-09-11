@@ -1,0 +1,22 @@
+.index {
+  height: 100vh;
+  //   background-color: red;
+  font: $headingfont;
+}
+
+.imgShuffle {
+  position: relative;
+  background-image: url("../img//hero/hero1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+  .imgCaption {
+    position: absolute;
+    font-size: 5em;
+    display: block;
+    top: 35vh;
+    left: 500px;
+    text-transform: uppercase;
+  }
+}

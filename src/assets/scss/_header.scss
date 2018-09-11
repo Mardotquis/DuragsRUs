@@ -2,13 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 .header__name {
-    font-family: 'Libre Barcode 128 Text', cursive;
+  font-family: "Libre Barcode 128 Text", cursive;
   font-size: 5em;
-  width: 240px;
-
+  flex-grow: 1;
+  color: black;
+  text-decoration: none;
+  margin-left: 16px;
+  &:hover {
+    color: $babyblue;
+  }
 }
 
 .header__icon {
@@ -17,15 +23,22 @@
   background-repeat: no-repeat;
   height: 100px;
   width: 100px;
-
+  flex-grow: 2;
 } //GOAT ICON FOR NAV BAR
-.header__extralinks{
-    width: 240px;
-    text-align: right;
-    font-family: 'Baloo Tammudu', cursive;
-    a {
-        text-decoration: none;
-        // color: $browngold;
-    }
-}
 
+.header__extralinks {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+
+  font-family: "Baloo Tammudu", cursive;
+  font-size: 2em;
+  a {
+    text-decoration: none;
+    color: $browngold;
+    margin: 0 2%;
+    &:hover {
+      color: $babyblue;
+    }
+  }
+}

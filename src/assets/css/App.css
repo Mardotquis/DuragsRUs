@@ -1,40 +1,3 @@
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__name {
-  font-family: 'Libre Barcode 128 Text', cursive;
-  font-size: 5em;
-  width: 240px;
-}
-
-.header__icon {
-  background-image: url("../img/goaticon.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100px;
-  width: 100px;
-}
-
-.header__extralinks {
-  width: 240px;
-  text-align: right;
-  font-family: 'Baloo Tammudu', cursive;
-}
-
-.header__extralinks a {
-  text-decoration: none;
-  color: #A14617;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -87,5 +50,272 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.header__name {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 5em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: black;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.header__name:hover {
+  color: #68ccfd;
+}
+
+.header__icon {
+  background-image: url("../img/goaticon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.header__extralinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: "Baloo Tammudu", cursive;
+  font-size: 2em;
+}
+
+.header__extralinks a {
+  text-decoration: none;
+  color: #a14617;
+  margin: 0 2%;
+}
+
+.header__extralinks a:hover {
+  color: #68ccfd;
+}
+
+.index {
+  height: 100vh;
+  font: "Kosugi", sans-serif;
+}
+
+.imgShuffle {
+  position: relative;
+  background-image: url("../img//hero/hero1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+.imgShuffle .imgCaption {
+  position: absolute;
+  font-size: 5em;
+  display: block;
+  top: 35vh;
+  left: 500px;
+  text-transform: uppercase;
+}
+
+.contact {
+  position: relative;
+  font-family: "Kosugi", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #68ccfd;
+}
+
+.contact__left_col {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 1em;
+}
+
+.contact__left_col .contact__pri_header {
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+}
+
+.contact__left_col .contact__sec_header {
+  font-size: 2em;
+}
+
+.contact__left_col p {
+  margin: 2.5% 0;
+  font-size: 1.25em;
+}
+
+.contact__form {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__form label {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  height: 75px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #eee;
+  font-size: 2em;
+}
+
+.contact__form #submitButton {
+  margin: 15px 0;
+  width: 50%;
+  border: 2px solid #a14617;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.contact__form #submitButton:focus, .contact__form #submitButton:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.footer {
+  height: 250px;
+  background-color: black;
+  color: #fff;
+  font-family: "Kosugi", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5%;
+  position: relative;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #68ccfd;
+}
+
+.footer__top_middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__top_middle p,
+.footer__top_middle a {
+  padding: 0 15px;
+  border-left: 1px solid #eee;
+}
+
+.footer__top_middle p:nth-last-of-type(odd) {
+  border-right: 1px solid #eee;
+}
+
+.footer__socialmedia {
+  margin-top: 5%;
+  display: inline-block;
+}
+
+.footer__socialmedia a {
+  padding: 5px 10px;
+  color: white;
+}
+
+.footer__socialmedia a i {
+  font-size: 2em;
+}
+
+.footer__small {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__payment_options {
+  position: absolute;
+  right: 0;
+}
+
+.footer__payment_options a {
+  padding: 0 10px;
+}
+
+.footer__payment_options a i {
+  font-size: 2.5em;
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */
