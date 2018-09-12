@@ -1,12 +1,10 @@
 import React from "react";
-
+import HeroImg from "./Hero";
 const Index = () => {
   return (
     <div className="index">
-      <h1>Home</h1>
-      <div className="imgShuffle">
-        <p className="imgCaption">Quality Durags</p>
-      </div>
+      <HeroImg />
+      <HeroImg />
     </div>
   );
 };
