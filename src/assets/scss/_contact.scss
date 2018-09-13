@@ -14,6 +14,7 @@
 .contact__left_col {
   flex-grow: 1;
   margin-left: 1em;
+
   .contact__pri_header {
     font-size: 3em;
     font-weight: bold;
@@ -34,6 +35,7 @@
   align-self: center;
   display: flex;
   flex-direction: column;
+  margin-right: 2%;
   label {
     font-size: 1.25em;
     margin-bottom: 10px;

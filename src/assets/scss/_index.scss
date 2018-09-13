@@ -1,26 +1,92 @@
 .index {
-  height: 100vh;
-  //   background-color: red;
-  font: $headingfont;
+  font-family: $headingfont;
+}
+.home__body {
+  font-family: $headingfont;
 }
 
-.imgShuffle {
+.duragShuffle {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   width: 100vw;
-  height: 70vh;
-  .imgCaption {
-    font-family: $headingfont;
-    font-weight: bold;
-    letter-spacing: 10px;
-    color: #fff;
-    font-size: 7em;
-    display: block;
-    text-transform: uppercase;
-    text-shadow: #fff 1px 1px 5px;
+  height: 80vh;
+}
+.imgCaption {
+  font-family: $headingfont;
+  font-weight: bold;
+
+  letter-spacing: 10px;
+  color: #fff;
+  font-size: 7em;
+  display: block;
+  text-transform: uppercase;
+  text-shadow: #fff 1px 1px 5px;
+  //   padding-bottom: 10%;
+}
+.durag__hero_btn {
+  font-size: 5em;
+  position: absolute;
+  bottom: 2em;
+  text-transform: uppercase;
+  background-color: $babyblue;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-family: $headingfont;
+  //   align-self: baseline;
+}
+.top {
+}
+.homebody__hero {
+  display: flex;
+
+  .shorts__background,
+  .durag__background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50vw;
+    height: 80vh;
+  }
+  .shorts__background {
+    background-image: url("../img/shortshero/shorthero1.jpg");
+  }
+  .durag__background {
+    background-image: url("../img/hero/hero33.png");
+    order: 2;
+    margin-top: 10vh;
+  }
+  .hero__captions {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    .hero__caption__header {
+      font-size: 5em;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+}
+.shop__link {
+  align-self: center;
+  margin-top: 1em;
+  padding: 0.5em;
+  width: 20vw;
+  background-color: $babyblue;
+
+  font-size: 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    background-color: $browngold;
   }
 }

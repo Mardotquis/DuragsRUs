@@ -16,16 +16,16 @@ const Footer = () => {
 
       <div className="footer__socialmedia">
         <a href="https://www.instagram.com">
-          <i class="fab fa-instagram" />
+          <i className="fab fa-instagram" />
         </a>
         <a href="https://www.twitter.com">
-          <i class="fab fa-twitter" />
+          <i className="fab fa-twitter" />
         </a>
         <a href="https://www.facebook.com">
-          <i class="fab fa-facebook" />
+          <i className="fab fa-facebook" />
         </a>
         <a href="https://www.snapchat.com">
-          <i class="fab fa-snapchat" />
+          <i className="fab fa-snapchat" />
         </a>
       </div>
 
@@ -33,22 +33,22 @@ const Footer = () => {
         <small>2018 &copy; DuragsRUs</small>
         <div className="footer__payment_options">
           <a>
-            <i class="fab fa-cc-visa" />
+            <i className="fab fa-cc-visa" />
           </a>
           <a>
-            <i class="fab fa-cc-mastercard" />
+            <i className="fab fa-cc-mastercard" />
           </a>
           <a>
-            <i class="fab fa-cc-discover" />
+            <i className="fab fa-cc-discover" />
           </a>
           <a>
-            <i class="fab fa-cc-amex" />
+            <i className="fab fa-cc-amex" />
           </a>
           <a>
-            <i class="fab fa-cc-paypal" />
+            <i className="fab fa-cc-paypal" />
           </a>
           <a>
-            <i class="fab fa-apple-pay" />
+            <i className="fab fa-apple-pay" />
           </a>
         </div>
       </div>
