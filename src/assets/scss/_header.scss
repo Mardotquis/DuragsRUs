@@ -9,11 +9,15 @@
   font-family: "Libre Barcode 128 Text", cursive;
   font-size: 5em;
   flex-grow: 1;
-  color: black;
+  color: $babyblue;
   text-decoration: none;
   margin-left: 16px;
-  &:hover {
-    color: $babyblue;
+  // &:hover {
+  //   color: $browngold;
+  // }
+  @media (max-width: $iphonemedia) {
+    font-size: 3em;
+    flex-grow: 1;
   }
 }
 
@@ -24,9 +28,9 @@
   height: 100px;
   width: 100px;
   flex-grow: 2;
-  // &:hover {
-  //   transform: scale(3);
-  // }
+  @media (max-width: $iphonemedia) {
+    background-size: 50px;
+  }
 } //GOAT ICON FOR NAV BAR
 
 .header__extralinks {
@@ -34,14 +38,27 @@
   justify-content: flex-end;
   flex-grow: 1;
 
-  font-family: "Baloo Tammudu", cursive;
+  font-family: $bodyfont;
   font-size: 2em;
-  a {
+  font-weight: bold;
+  text-transform: uppercase;
+  a,
+  li {
     text-decoration: none;
-    color: $browngold;
+    color: $babyblue;
     margin: 0 2%;
     &:hover {
-      color: $babyblue;
+      color: $browngold;
     }
+  }
+  @media (max-width: $iphonemedia) {
+    font-size: 1em;
+  }
+}
+
+.active {
+  color: $browngold;
+  &:hover {
+    color: $babyblue;
   }
 }

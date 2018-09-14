@@ -23,7 +23,11 @@ class ProductCard extends Component {
     return (
       <div className="product__card">
         <h2 className="product__card__title">{this.props.title}</h2>
-        <img src={this.props.imgSrc} className="product__img" />
+        <img
+          src={this.props.imgSrc}
+          className="product__img"
+          alt={this.props.description}
+        />
         <p className="product__card_price">${this.props.price}</p>
         <p className="product__card_quanity">Qty: {this.state.quanity}</p>
         <div className="product__controls">

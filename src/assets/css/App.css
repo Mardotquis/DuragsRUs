@@ -138,6 +138,10 @@ h1 {
   font-size: 3em;
   font-weight: bold;
   margin-left: 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
 .header {
@@ -159,13 +163,18 @@ h1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  color: black;
+  color: #68ccfd;
   text-decoration: none;
   margin-left: 16px;
 }
 
-.header__name:hover {
-  color: #68ccfd;
+@media (max-width: 650px) {
+  .header__name {
+    font-size: 3em;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .header__icon {
@@ -179,6 +188,12 @@ h1 {
           flex-grow: 2;
 }
 
+@media (max-width: 650px) {
+  .header__icon {
+    background-size: 50px;
+  }
+}
+
 .header__extralinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,25 +204,39 @@ h1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-family: "Baloo Tammudu", cursive;
+  font-family: "Kosugi", sans-serif;
   font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.header__extralinks a {
+.header__extralinks a,
+.header__extralinks li {
   text-decoration: none;
-  color: #a14617;
+  color: #68ccfd;
   margin: 0 2%;
 }
 
-.header__extralinks a:hover {
+.header__extralinks a:hover,
+.header__extralinks li:hover {
+  color: #a14617;
+}
+
+@media (max-width: 650px) {
+  .header__extralinks {
+    font-size: 1em;
+  }
+}
+
+.active {
+  color: #a14617;
+}
+
+.active:hover {
   color: #68ccfd;
 }
 
 .index {
-  font-family: "Kosugi", sans-serif;
-}
-
-.home__body {
   font-family: "Kosugi", sans-serif;
 }
 
@@ -242,6 +271,7 @@ h1 {
   display: block;
   text-transform: uppercase;
   text-shadow: #fff 1px 1px 5px;
+  border: none !important;
 }
 
 .durag__hero_btn {
@@ -272,13 +302,13 @@ h1 {
 
 .homebody__hero .shorts__background {
   background-image: url("../img/shortshero/shorthero1.jpg");
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .homebody__hero .durag__background {
   background-image: url("../img/hero/hero33.png");
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   margin-top: 10vh;
 }
 
@@ -295,6 +325,7 @@ h1 {
           flex-direction: column;
   justify-items: center;
   text-align: center;
+  letter-spacing: 5px;
 }
 
 .homebody__hero .hero__captions .hero__caption__header {
@@ -328,6 +359,31 @@ h1 {
 
 .products__header {
   font-weight: bold;
+}
+
+.products__filter {
+  margin-top: 2em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products__forms {
+  margin: 0 1em;
+}
+
+.products__form select {
+  width: 200px;
+  height: 3em;
+  border: none;
+  border-bottom: 5px solid #68ccfd;
+  font-size: 1.25em;
+}
+
+.form__title {
+  font-size: 2.5em;
+  margin-bottom: 0.35em;
 }
 
 .product__cards {
@@ -405,7 +461,7 @@ h1 {
   border-radius: 20px;
 }
 
-.product__card-addToCart-btn:hover, .product__card-addToCart-btn:focus {
+.product__card-addToCart-btn:hover {
   color: #000;
   background-color: #fff;
 }
@@ -483,6 +539,12 @@ button:hover, button:active {
   color: #68ccfd;
 }
 
+@media (max-width: 1085px) {
+  .contact {
+    display: block;
+  }
+}
+
 .contact__left_col {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -495,6 +557,13 @@ button:hover, button:active {
   font-weight: bold;
   position: absolute;
   top: 0;
+}
+
+@media (max-width: 1085px) {
+  .contact__left_col .contact__pri_header {
+    position: relative;
+    margin-bottom: 1em;
+  }
 }
 
 .contact__left_col .contact__sec_header {
@@ -527,6 +596,12 @@ button:hover, button:active {
   margin-bottom: 10px;
 }
 
+@media (max-width: 1085px) {
+  .contact__form label {
+    margin-left: 16px;
+  }
+}
+
 .contact__form input,
 .contact__form textarea {
   height: 75px;
@@ -534,6 +609,15 @@ button:hover, button:active {
   border: none;
   border-bottom: 2px solid #eee;
   font-size: 2em;
+}
+
+@media (max-width: 1085px) {
+  .contact__form input,
+  .contact__form textarea {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .contact__form #submitButton {
@@ -630,6 +714,13 @@ button:hover, button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1085px) {
+  .footer__small {
+    display: inline;
+    margin-bottom: 7%;
+  }
 }
 
 .footer__payment_options {

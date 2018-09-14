@@ -43,7 +43,7 @@ class HeroImg extends Component {
   render() {
     return (
       <div className="duragShuffle">
-        <p className="imgCaption">Quality Durags</p>
+        <h1 className="imgCaption">Quality Durags</h1>
         {/* <Link to="/products" className="durag__hero_btn">
           shop durags
         </Link> */}

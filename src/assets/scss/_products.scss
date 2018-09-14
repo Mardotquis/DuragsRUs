@@ -5,7 +5,27 @@
 .products__header {
   font-weight: bold;
 }
-
+.products__filter {
+  margin-top: 2em;
+  width: 100%;
+  display: flex;
+}
+.products__forms {
+  margin: 0 1em;
+}
+.products__form {
+  select {
+    width: 200px;
+    height: 3em;
+    border: none;
+    border-bottom: 5px solid $babyblue;
+    font-size: 1.25em;
+  }
+}
+.form__title {
+  font-size: 2.5em;
+  margin-bottom: 0.35em;
+}
 .product__cards {
   letter-spacing: 1.5px;
   display: flex;
@@ -54,8 +74,7 @@
   color: #fff;
   background-color: #000;
   border-radius: 20px;
-  &:hover,
-  &:focus {
+  &:hover {
     color: #000;
     background-color: #fff;
   }

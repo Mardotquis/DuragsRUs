@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer__top_middle">
         <p>500 Main Street Charlotte, N.C. 28205</p>
         <Link to="/products">Products</Link>
@@ -52,7 +52,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

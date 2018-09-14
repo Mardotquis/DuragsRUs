@@ -1,9 +1,6 @@
 .index {
   font-family: $headingfont;
 }
-.home__body {
-  font-family: $headingfont;
-}
 
 .duragShuffle {
   position: relative;
@@ -28,6 +25,7 @@
   text-transform: uppercase;
   text-shadow: #fff 1px 1px 5px;
   //   padding-bottom: 10%;
+  border: none !important;
 }
 .durag__hero_btn {
   font-size: 5em;
@@ -41,8 +39,7 @@
   font-family: $headingfont;
   //   align-self: baseline;
 }
-.top {
-}
+
 .homebody__hero {
   display: flex;
 
@@ -55,10 +52,11 @@
   }
   .shorts__background {
     background-image: url("../img/shortshero/shorthero1.jpg");
+    order: -1;
   }
   .durag__background {
     background-image: url("../img/hero/hero33.png");
-    order: 2;
+
     margin-top: 10vh;
   }
   .hero__captions {
@@ -68,6 +66,7 @@
     flex-direction: column;
     justify-items: center;
     text-align: center;
+    letter-spacing: 5px;
     .hero__caption__header {
       font-size: 5em;
       display: block;

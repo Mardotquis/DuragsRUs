@@ -6,7 +6,7 @@ const Products = {
 
       description: "Easy. Breezy. Beautiful ... Silky",
       price: 29.99,
-      productType: "durag",
+      productType: "durags",
       productCategory: "designer",
       productImages: "images/rags/1durags.jpg",
       availability: "In Stock",
@@ -18,7 +18,7 @@ const Products = {
 
       description: "Easy. Breezy. Beautiful ... Silky",
       price: 29.99,
-      productType: "durag",
+      productType: "durags",
       productCategory: "designer",
       productImages: "images/rags/21durags.jpg",
       availability: "In Stock",
@@ -30,7 +30,7 @@ const Products = {
 
       description: "Easy. Breezy. Beautiful ... Silky",
       price: 24.99,
-      productType: "durag",
+      productType: "durags",
       productCategory: "brand",
       productImages: "images/ccwhite.jpeg",
       availability: "In Stock",
@@ -42,7 +42,7 @@ const Products = {
 
       description: "Easy. Breezy. Beautiful ... Silky",
       price: 26.99,
-      productType: "durag",
+      productType: "durags",
       productCategory: "designer",
       productImages: "images/tiger.jpg",
       availability: "In Stock",
@@ -54,7 +54,7 @@ const Products = {
 
       description: "Easy. Breezy. Beautiful ... Silky",
       price: 29.99,
-      productType: "durag",
+      productType: "durags",
       productCategory: "brand",
       productImages: "images/louie.png",
       availability: "In Stock",
@@ -66,7 +66,7 @@ const Products = {
 
       description: "Easy. Breezy. Beautiful ... Silky",
       price: 35.99,
-      productType: "durag",
+      productType: "durags",
       productCategory: "brand",
       productImages: "images/colorful.jpg",
       availability: "In Stock",
