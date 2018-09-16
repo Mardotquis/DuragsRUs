@@ -1,0 +1,54 @@
+Design an API to serve the information needed for the eCommerce site
+______________________________________________________________________
+
+
+Must include plans for an admin to view/add/edit/delete products
+______________________________________________________________________
+IF ADMIN WANTS TO **VIEW** products
+
+GET /products
+***********************************************************************
+IF ADMIN WANTS TO **ADD** product(s)
+
+POST /products/product_id
+***********************************************************************
+IF ADMIN WANTS TO **EDIT** product(s)
+
+PUT /products/product_id
+***********************************************************************
+IF ADMIN WANTS TO **DELETE** products
+
+DELETE /products/product_id
+***********************************************************************
+
+
+Must include plans for an admin to view/add/edit/delete new admin users
+______________________________________________________________________
+IF ADMIN WANTS TO **VIEW** CURRENT ADMIN USERS
+
+GET /admins
+***********************************************************************
+IF ADMIN WANTS TO **ADD** A NEW ADMIN USER
+
+POST /admins/admin_id
+***********************************************************************
+IF ADMIN WANTS TO **EDIT** CURRENT ADMIN USERS INFORMATION
+
+PUT /admins/admin_id
+***********************************************************************
+IF ADMIN WANTS TO **DELETE** AN ADMIN USER
+
+DELETE /admin/admin_id
+***********************************************************************
+
+
+Must include plans for an admin to view/delete information submitted through contact form
+______________________________________________________________________
+IF ADMIN WANTS TO **VIEW** INFORMATION SUBMITTED THROUGH A CONTACT FORM
+
+GET /submitted_data
+***********************************************************************
+IF ADMIN WANTS TO **DELETE** INFORMATION SUBMITTED THROUGH A CONTACT FORM
+
+DELETE /submitted_data/data_id
+***********************************************************************

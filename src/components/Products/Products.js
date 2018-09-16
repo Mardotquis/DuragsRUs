@@ -38,10 +38,7 @@ class Products extends Component {
       filteredProducts: filterArr
     });
   };
-  onSaleItems = () => {
-    if (this.state.ProductsJSON.products.price < 25) {
-    }
-  };
+
   render() {
     let newProducts = [];
 
@@ -51,7 +48,6 @@ class Products extends Component {
       newProducts = this.state.filteredProducts;
     }
 
-    const jsonData = this.state.products;
     return (
       <div className="products">
         <h1 className="products__header">Products</h1>

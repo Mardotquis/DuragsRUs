@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 import pinkRag from "../../assets/img/hero/hero1.jpg";
 import blackRag from "../../assets/img/hero/hero22.jpg";
 import goldRag from "../../assets/img/hero/hero3.jpg";
