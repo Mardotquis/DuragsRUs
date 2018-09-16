@@ -142,7 +142,7 @@ const Products = {
       title: "Play Polka Dot",
 
       description: "Trunks!",
-      price: 99.99,
+      price: 19.99,
       productType: "shorts",
       productCategory: "limited edition",
       productImages: "images/play.jpg",

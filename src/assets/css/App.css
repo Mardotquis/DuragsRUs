@@ -373,6 +373,10 @@ h1 {
   margin: 0 1em;
 }
 
+.products__form {
+  margin: 0 1%;
+}
+
 .products__form select {
   width: 200px;
   height: 3em;
@@ -393,9 +397,8 @@ h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -404,14 +407,15 @@ h1 {
 }
 
 .product__cards .product__card {
+  position: relative;
   text-align: center;
   text-transform: uppercase;
-  min-width: 30%;
+  min-width: 25%;
   margin: 3% 0;
 }
 
 .product__card__title {
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-family: "Kosugi", sans-serif;
 }
 
@@ -516,6 +520,66 @@ button:hover, button:active {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
+  }
+}
+
+.itemOnSale {
+  background: url("../img/saleicon.png");
+  background-repeat: no-repeat;
+  background-size: 3em;
+  z-index: -1;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  top: -10px;
+  left: -10px;
+  -webkit-animation: saleIconDance 3s infinite;
+          animation: saleIconDance 3s infinite;
+}
+
+@-webkit-keyframes saleIconDance {
+  0% {
+    -webkit-transform: skew(25deg);
+            transform: skew(25deg);
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: skew(-25deg);
+            transform: skew(-25deg);
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: skew(25deg);
+            transform: skew(25deg);
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+}
+
+@keyframes saleIconDance {
+  0% {
+    -webkit-transform: skew(25deg);
+            transform: skew(25deg);
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: skew(-25deg);
+            transform: skew(-25deg);
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: skew(25deg);
+            transform: skew(25deg);
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
   }
 }
 

@@ -23,6 +23,7 @@ class ProductCard extends Component {
     return (
       <div className="product__card">
         <h2 className="product__card__title">{this.props.title}</h2>
+        <div className={this.props.price < 30 ? "itemOnSale" : false} />
         <img
           src={this.props.imgSrc}
           className="product__img"

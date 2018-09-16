@@ -14,6 +14,7 @@
   margin: 0 1em;
 }
 .products__form {
+  margin: 0 1%;
   select {
     width: 200px;
     height: 3em;
@@ -30,19 +31,20 @@
   letter-spacing: 1.5px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   align-items: center;
   .product__card {
+    position: relative;
     text-align: center;
     text-transform: uppercase;
-    min-width: 30%;
+    min-width: 25%;
     margin: 3% 0;
   }
 }
 
 .product__card__title {
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-family: $bodyfont;
 }
 .product__img {
@@ -109,5 +111,35 @@ button {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+.itemOnSale {
+  background: url("../img/saleicon.png");
+  background-repeat: no-repeat;
+  background-size: 3em;
+  z-index: -1;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  transform: skew(20deg);
+  transform: rotate(-20deg);
+  top: -10px;
+  left: -10px;
+  animation: saleIconDance 3s infinite;
+}
+
+@keyframes saleIconDance {
+  0% {
+    transform: skew(25deg);
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: skew(-25deg);
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: skew(25deg);
+    transform: rotate(-25deg);
   }
 }

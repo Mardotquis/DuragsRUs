@@ -11,46 +11,37 @@ class Products extends Component {
     };
   }
 
-  filterProduts = () => {
+  filterProducts = () => {
     let typeValue = document.querySelector(".typeSelection").value;
     let priceValue = document.querySelector(".priceSelection").value;
     let filterArr = this.state.ProductsJSON.products;
 
-    filterArr.filter(type => type.productType === typeValue);
-
-    let filter = this.state.ProductsJSON.products;
-    if (typeValue) {
-      filter = this.state.ProductsJSON.products.filter(
+    if (typeValue === "durags" || typeValue === "shorts") {
+      filterArr = this.state.ProductsJSON.products.filter(
         type => type.productType === typeValue
       );
     }
-    // if(priceValue){
-    //   filter = this.state.ProductsJSON.products.filter(
-    //     price =>
-    //   )
-    // }
 
-    // let hello = this.state.ProductsJSON.products;
-    // const durag = this.state.ProductsJSON.products.filter(
-    //   word => word.price ===
-    // );
-    // console.log(durag);
-    // let arr = [];
-    // hello.map(hi => {
-    //   arr.push(hi.price);
-    // });
-    // console.log("hi", arr);
-    // let low = arr.sort((a, b) => a - b);
-    // console.log("low", low);
-    // let high = arr.sort((a, b) => b - a);
-    // console.log("high", high);
+    if (priceValue) {
+      if (priceValue === "asc") {
+        filterArr.sort((a, b) => {
+          return a.price - b.price;
+        });
+      } else if (priceValue === "dec") {
+        filterArr.sort((a, b) => {
+          return b.price - a.price;
+        });
+      }
+    }
 
     this.setState({
-      filteredProducts: filter
+      filteredProducts: filterArr
     });
-    console.log(this.state.filteredProducts);
   };
-
+  onSaleItems = () => {
+    if (this.state.ProductsJSON.products.price < 25) {
+    }
+  };
   render() {
     let newProducts = [];
 
@@ -60,22 +51,21 @@ class Products extends Component {
       newProducts = this.state.filteredProducts;
     }
 
-    // console.log(jsonData);
     const jsonData = this.state.products;
     return (
       <div className="products">
         <h1 className="products__header">Products</h1>
 
         <div className="products__filter">
-          <form className="products__form" onChange={this.filterProduts}>
+          <form className="products__form" onChange={this.filterProducts}>
             <select className="typeSelection" name="typeSelection">
-              <option value="durags">Sort By:</option>
+              <option>Sort By:</option>
               <option value="durags">Durags</option>
               <option value="shorts">Shorts</option>
             </select>
           </form>
 
-          <form className="products__form" onChange={this.filterProduts}>
+          <form className="products__form" onChange={this.filterProducts}>
             <select name="price" className="priceSelection">
               <option>Price</option>
               <option value="asc">Low to High</option>
