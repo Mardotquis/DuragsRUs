@@ -21,6 +21,11 @@
     border: none;
     border-bottom: 5px solid $babyblue;
     font-size: 1.25em;
+    @media (max-width: $iphonemedia) {
+      width: 100px;
+      height: 1.5em;
+      margin: 0 1em;
+    }
   }
 }
 .form__title {
@@ -40,6 +45,10 @@
     text-transform: uppercase;
     min-width: 25%;
     margin: 3% 0;
+    @media (max-width: $iphonemedia) {
+      display: block;
+      padding: 1em;
+    }
   }
 }
 

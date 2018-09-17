@@ -170,7 +170,7 @@ h1 {
 
 @media (max-width: 650px) {
   .header__name {
-    font-size: 3em;
+    font-size: 2em;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -190,7 +190,7 @@ h1 {
 
 @media (max-width: 650px) {
   .header__icon {
-    background-size: 50px;
+    background-size: 50%;
   }
 }
 
@@ -225,6 +225,11 @@ h1 {
 @media (max-width: 650px) {
   .header__extralinks {
     font-size: 1em;
+    display: block;
+  }
+  .header__extralinks a,
+  .header__extralinks li {
+    padding-bottom: 1em;
   }
 }
 
@@ -262,6 +267,12 @@ h1 {
   height: 80vh;
 }
 
+@media (max-width: 650px) {
+  .duragShuffle {
+    height: 50vh;
+  }
+}
+
 .imgCaption {
   font-family: "Kosugi", sans-serif;
   font-weight: bold;
@@ -272,6 +283,12 @@ h1 {
   text-transform: uppercase;
   text-shadow: #fff 1px 1px 5px;
   border: none !important;
+}
+
+@media (max-width: 650px) {
+  .imgCaption {
+    font-size: 4em;
+  }
 }
 
 .durag__hero_btn {
@@ -300,6 +317,16 @@ h1 {
   height: 80vh;
 }
 
+@media (max-width: 650px) {
+  .homebody__hero .shorts__background,
+  .homebody__hero .durag__background {
+    width: 100%;
+    height: 50vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 .homebody__hero .shorts__background {
   background-image: url("../img/shortshero/shorthero1.jpg");
   -webkit-box-ordinal-group: 0;
@@ -310,6 +337,12 @@ h1 {
 .homebody__hero .durag__background {
   background-image: url("../img/hero/hero33.png");
   margin-top: 10vh;
+}
+
+@media (max-width: 650px) {
+  .homebody__hero .durag__background {
+    margin: 0;
+  }
 }
 
 .homebody__hero .hero__captions {
@@ -334,6 +367,27 @@ h1 {
   text-transform: uppercase;
 }
 
+@media (max-width: 650px) {
+  .homebody__hero .hero__captions .hero__caption__header {
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .homebody__hero .hero__captions {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .homebody__hero {
+    display: block;
+  }
+}
+
 .shop__link {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -350,6 +404,13 @@ h1 {
 
 .shop__link:hover {
   background-color: #a14617;
+}
+
+@media (max-width: 650px) {
+  .shop__link {
+    font-size: 1.5em;
+    width: 100%;
+  }
 }
 
 .products {
@@ -385,6 +446,14 @@ h1 {
   font-size: 1.25em;
 }
 
+@media (max-width: 650px) {
+  .products__form select {
+    width: 100px;
+    height: 1.5em;
+    margin: 0 1em;
+  }
+}
+
 .form__title {
   font-size: 2.5em;
   margin-bottom: 0.35em;
@@ -412,6 +481,13 @@ h1 {
   text-transform: uppercase;
   min-width: 25%;
   margin: 3% 0;
+}
+
+@media (max-width: 650px) {
+  .product__cards .product__card {
+    display: block;
+    padding: 1em;
+  }
 }
 
 .product__card__title {
@@ -730,6 +806,12 @@ button:hover, button:active {
   color: #68ccfd;
 }
 
+@media (max-width: 650px) {
+  .footer {
+    height: 400px;
+  }
+}
+
 .footer__top_middle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -749,6 +831,26 @@ button:hover, button:active {
   border-right: 1px solid #eee;
 }
 
+@media (max-width: 1085px) {
+  .footer__top_middle p:nth-last-of-type(odd) {
+    border: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer__top_middle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__top_middle p,
+  .footer__top_middle a {
+    padding-bottom: 6%;
+    border: none;
+  }
+}
+
 .footer__socialmedia {
   margin-top: 5%;
   display: inline-block;
@@ -761,6 +863,15 @@ button:hover, button:active {
 
 .footer__socialmedia a i {
   font-size: 2em;
+}
+
+@media (max-width: 650px) {
+  .footer__socialmedia {
+    margin: 5% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__small {
@@ -787,6 +898,13 @@ button:hover, button:active {
   }
 }
 
+@media (max-width: 650px) {
+  .footer__small {
+    display: inline;
+    margin-bottom: 7%;
+  }
+}
+
 .footer__payment_options {
   position: absolute;
   right: 2%;
@@ -799,5 +917,22 @@ button:hover, button:active {
 .footer__payment_options a i {
   font-size: 2.5em;
   color: white;
+}
+
+@media (max-width: 650px) {
+  .footer__payment_options {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__payment_options a,
+  .footer__payment_options i {
+    padding: 0 3px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

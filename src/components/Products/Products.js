@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProductCard from "./ProductCard/ProductCard";
 import ProductsJSON from "../../assets/JSON/ProductsJSON:";
-// import FilterForm from "./FilterForm/FilterForm";
+
 class Products extends Component {
   constructor() {
     super();

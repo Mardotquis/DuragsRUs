@@ -12,11 +12,9 @@
   color: $babyblue;
   text-decoration: none;
   margin-left: 16px;
-  // &:hover {
-  //   color: $browngold;
-  // }
+
   @media (max-width: $iphonemedia) {
-    font-size: 3em;
+    font-size: 2em;
     flex-grow: 1;
   }
 }
@@ -29,7 +27,7 @@
   width: 100px;
   flex-grow: 2;
   @media (max-width: $iphonemedia) {
-    background-size: 50px;
+    background-size: 50%;
   }
 } //GOAT ICON FOR NAV BAR
 
@@ -53,6 +51,11 @@
   }
   @media (max-width: $iphonemedia) {
     font-size: 1em;
+    display: block;
+    a,
+    li {
+      padding-bottom: 1em;
+    }
   }
 }
 

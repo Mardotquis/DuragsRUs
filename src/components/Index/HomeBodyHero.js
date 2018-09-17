@@ -10,7 +10,6 @@ const HomeBodyHero = props => {
         </Link>
       </div>
       <div className={props.backgroundImg} />
-      {console.log("hi im working")}
     </div>
   );
 };
