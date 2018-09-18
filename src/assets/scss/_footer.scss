@@ -1,4 +1,7 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+
   height: 250px;
   background-color: black;
   color: #fff;
@@ -33,6 +36,7 @@
     &:nth-last-of-type(odd) {
       border-right: 1px solid #eee;
       @media (max-width: $ipadmedia) {
+        font-size: 0.75em;
         border: none;
       }
     }

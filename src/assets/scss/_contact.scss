@@ -1,4 +1,5 @@
 .contact {
+  margin-top: 16vh;
   position: relative;
   font-family: $headingfont;
   a {
@@ -30,10 +31,16 @@
   }
   .contact__sec_header {
     font-size: 2em;
+    @media (max-width: $iphonemedia) {
+      margin-bottom: 1em;
+    }
   }
   p {
     margin: 2.5% 0;
     font-size: 1.25em;
+    @media (max-width: $iphonemedia) {
+      margin-bottom: 1em;
+    }
   }
 }
 
