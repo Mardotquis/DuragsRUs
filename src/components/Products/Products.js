@@ -16,7 +16,7 @@ class Products extends Component {
     let priceValue = document.querySelector(".priceSelection").value;
     let filterArr = this.state.ProductsJSON.products;
 
-    if (typeValue === "durags" || typeValue === "shorts") {
+    if (typeValue !== "default") {
       filterArr = this.state.ProductsJSON.products.filter(
         type => type.productType === typeValue
       );
@@ -55,7 +55,7 @@ class Products extends Component {
         <div className="products__filter">
           <form className="products__form" onChange={this.filterProducts}>
             <select className="typeSelection" name="typeSelection">
-              <option>Sort By:</option>
+              <option value="default">Sort By:</option>
               <option value="durags">Durags</option>
               <option value="shorts">Shorts</option>
             </select>

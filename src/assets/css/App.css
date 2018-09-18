@@ -261,11 +261,11 @@ h1 {
   }
 }
 
-.active {
+.activeLink {
   color: #a14617;
 }
 
-.active:hover {
+.activeLink:hover {
   color: #68ccfd;
 }
 

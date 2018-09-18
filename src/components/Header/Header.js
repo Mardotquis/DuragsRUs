@@ -3,7 +3,12 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <nav className="header">
-      <NavLink to="/" className="header__name" activeStyle="active" exact>
+      <NavLink
+        to="/"
+        className="header__name"
+        activeClassName="activeLink"
+        exact
+      >
         DuragsRUs
       </NavLink>
       <NavLink to="/">
@@ -12,7 +17,6 @@ const Header = () => {
 
       <ul className="header__extralinks">
         <li>
-          {" "}
           <NavLink to="/products" activeClassName="activeLink">
             Products
           </NavLink>
