@@ -1,54 +1,25 @@
-Design an API to serve the information needed for the eCommerce site
+***API DESIGN***
+
+Must include plans for an admin to view/add/edit/delete products:
 ______________________________________________________________________
 
-
-Must include plans for an admin to view/add/edit/delete products
-______________________________________________________________________
-IF ADMIN WANTS TO **VIEW** products
-
-GET /products
-***********************************************************************
-IF ADMIN WANTS TO **ADD** product(s)
-
-POST /products/product_id
-***********************************************************************
-IF ADMIN WANTS TO **EDIT** product(s)
-
-PUT /products/product_id
-***********************************************************************
-IF ADMIN WANTS TO **DELETE** products
-
-DELETE /products/product_id
-***********************************************************************
+GET::duragsrus.com/products = IF ADMIN WANTS TO **VIEW** product(s)
+POST::duragsrus.com/products/product_id = IF ADMIN WANTS TO **ADD** product(s)
+PUT::duragsrus.com/products/product_id = IF ADMIN WANTS TO **EDIT** product(s)
+DELETE::duragsrus.com/products/product_id = IF ADMIN WANTS TO **DELETE** product(s)
 
 
 Must include plans for an admin to view/add/edit/delete new admin users
 ______________________________________________________________________
-IF ADMIN WANTS TO **VIEW** CURRENT ADMIN USERS
 
-GET /admins
-***********************************************************************
-IF ADMIN WANTS TO **ADD** A NEW ADMIN USER
-
-POST /admins/admin_id
-***********************************************************************
-IF ADMIN WANTS TO **EDIT** CURRENT ADMIN USERS INFORMATION
-
-PUT /admins/admin_id
-***********************************************************************
-IF ADMIN WANTS TO **DELETE** AN ADMIN USER
-
-DELETE /admin/admin_id
-***********************************************************************
+GET::duragsrus.com/admins = IF ADMIN WANTS TO **VIEW** CURRENT ADMIN USERS
+POST::duragsrus.com/admins/admin_id = IF ADMIN WANTS TO **ADD** A NEW ADMIN USER
+PUT::duragsrus.com/admins/admin_id = IF ADMIN WANTS TO **EDIT** CURRENT ADMIN USERS INFORMATION
+DELETE::duragsrus.com/admins/admin_id = IF ADMIN WANTS TO **DELETE** AN ADMIN USER
 
 
 Must include plans for an admin to view/delete information submitted through contact form
 ______________________________________________________________________
-IF ADMIN WANTS TO **VIEW** INFORMATION SUBMITTED THROUGH A CONTACT FORM
 
-GET /submitted_data
-***********************************************************************
-IF ADMIN WANTS TO **DELETE** INFORMATION SUBMITTED THROUGH A CONTACT FORM
-
-DELETE /submitted_data/data_id
-***********************************************************************
+GET::duragsrus.com/contact/submitted_data = IF ADMIN WANTS TO **VIEW** INFORMATION SUBMITTED THROUGH A CONTACT FORM
+DELETE::duragsrus.com/contact/submitted_data/data_id = IF ADMIN WANTS TO **DELETE** INFORMATION SUBMITTED THROUGH A CONTACT FORM
