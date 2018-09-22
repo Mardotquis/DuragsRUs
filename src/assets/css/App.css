@@ -647,6 +647,11 @@ button:hover, button:active {
           animation: saleIconDance 3s infinite;
 }
 
+.errorHandler {
+  font-size: 5em;
+  text-align: center;
+}
+
 @-webkit-keyframes saleIconDance {
   0% {
     -webkit-transform: skew(25deg);

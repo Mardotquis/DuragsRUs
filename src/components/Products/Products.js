@@ -1,23 +1,41 @@
 import React, { Component } from "react";
 import ProductCard from "./ProductCard/ProductCard";
-import ProductsJSON from "../../assets/JSON/ProductsJSON:";
+// import ProductsJSON from "../../assets/JSON/ProductsJSON";
+// import axios from "axios";
 
 class Products extends Component {
   constructor() {
     super();
     this.state = {
-      ProductsJSON,
-      filteredProducts: []
+      ProductsJSON: [],
+      filteredProducts: [],
+
     };
   }
+  componentDidMount() {
+    const url = 'http://localhost:8080/products';
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((data) => {
+        this.setState({
+          ProductsJSON: data
+        })
+      })
+      .catch((error) => {
+        console.log("ERROR")
+        const errorHTML = "<h2>Sorry, an error has occured with fetching products...";
+        document.querySelector('.errorHandler').innerHTML = errorHTML
+      })
 
+
+  };
   filterProducts = () => {
     let typeValue = document.querySelector(".typeSelection").value;
     let priceValue = document.querySelector(".priceSelection").value;
-    let filterArr = this.state.ProductsJSON.products;
+    let filterArr = this.state.ProductsJSON;
 
     if (typeValue !== "default") {
-      filterArr = this.state.ProductsJSON.products.filter(
+      filterArr = this.state.ProductsJSON.filter(
         type => type.productType === typeValue
       );
     }
@@ -43,10 +61,11 @@ class Products extends Component {
     let newProducts = [];
 
     if (this.state.filteredProducts.length === 0) {
-      newProducts = this.state.ProductsJSON.products;
+      newProducts = this.state.ProductsJSON;
     } else {
       newProducts = this.state.filteredProducts;
     }
+
 
     return (
       <div className="products">
@@ -83,6 +102,7 @@ class Products extends Component {
             );
           })}
         </div>
+        <div className="errorHandler"></div>
       </div>
     );
   }

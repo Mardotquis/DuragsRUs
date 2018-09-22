@@ -30,9 +30,20 @@ class HeroImg extends Component {
 
   componentDidMount() {
     this.heroSlider();
+
+    const url = 'http://localhost:8080/products';
+    fetch(url)
+
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data)
+      })
+
   }
 
+
   render() {
+
     return (
       <div className="duragShuffle">
         <h1 className="imgCaption">Quality Durags</h1>
