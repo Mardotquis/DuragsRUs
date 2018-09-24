@@ -22,12 +22,10 @@ class Products extends Component {
         })
       })
       .catch((error) => {
-        console.log("ERROR")
+        console.warn('ERROR')
         const errorHTML = "<h2>Sorry, an error has occured with fetching products...";
         document.querySelector('.errorHandler').innerHTML = errorHTML
       })
-
-
   };
   filterProducts = () => {
     let typeValue = document.querySelector(".typeSelection").value;
