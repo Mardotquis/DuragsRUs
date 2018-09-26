@@ -1,4 +1,5 @@
 .products_manager_admin {
+  position: relative;
   margin-top: 16vh;
   // background-color: $dark-grey;
   // color: #fff;
@@ -148,17 +149,25 @@
 	box-shadow: 0 7px 4px #777;
   ::placeholder{
     text-transform: uppercase;
+    color: $browngold;
   }
-
-  background-color: red;
-  height: 300px;
+position: fixed;
+z-index: 20;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+background-color: $browngold;
+  height: 400px;
   width: 50%;
+// background-color: rgba($color: #000000, $alpha:.51);
+// background-color: rgba($color: #000000, $alpha: 1);
   display: none;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-
+border-radius: 30px;
   input {
+    color: #fff;
     text-align: center;
     width: 50%;
     height: 30px;
@@ -166,6 +175,10 @@
     font-size: 3em;
     font-family: $vt-font;
     border-radius: 5px;
+    background-color: $babyblue;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
 
   }
   .submitButton {
@@ -174,11 +187,53 @@
     margin: 10px;
     // height: 30px;
     align-self: center;
-    background-color: $blue;
+    background-color: $babyblue;
     &:focus,
     &:active {
       background-color: #f0f0f0;
       color: $blue;
     }
   }
+
+}
+button:disabled,
+button[disabled]{
+ display: none;
+}
+
+.productFormSlideIn{
+  display: flex;
+}
+.formOverlay{
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: rgba($color: $dark-grey, $alpha: .5)
+}
+
+.confirmationMessage{
+position: absolute;
+width: 50%;
+height: 250px;
+font-size: 4em;
+display: none;
+z-index: 20;
+background-color: $red;
+text-align: center;
+border-radius: 30px;
+.confirmationButton{
+  font-size: 1em;
+margin: 1rem;
+}
+.noDelete{
+  color: $green
+}
+.yesDelete{
+  background-color: #fff;
+color: #000;
+}
 }

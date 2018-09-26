@@ -1006,6 +1006,7 @@ button:hover, button:active {
 }
 
 .products_manager_admin {
+  position: relative;
   margin-top: 16vh;
   font-family: "VT323", monospace;
 }
@@ -1190,8 +1191,14 @@ button:hover, button:active {
 .productForm {
   -webkit-box-shadow: 0 7px 4px #777;
           box-shadow: 0 7px 4px #777;
-  background-color: red;
-  height: 300px;
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #a14617;
+  height: 400px;
   width: 50%;
   display: none;
   -webkit-box-orient: vertical;
@@ -1202,25 +1209,31 @@ button:hover, button:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  border-radius: 30px;
 }
 
 .productForm ::-webkit-input-placeholder {
   text-transform: uppercase;
+  color: #a14617;
 }
 
 .productForm :-ms-input-placeholder {
   text-transform: uppercase;
+  color: #a14617;
 }
 
 .productForm ::-ms-input-placeholder {
   text-transform: uppercase;
+  color: #a14617;
 }
 
 .productForm ::placeholder {
   text-transform: uppercase;
+  color: #a14617;
 }
 
 .productForm input {
+  color: #fff;
   text-align: center;
   width: 50%;
   height: 30px;
@@ -1230,6 +1243,10 @@ button:hover, button:active {
   font-size: 3em;
   font-family: "VT323", monospace;
   border-radius: 5px;
+  background-color: #68ccfd;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
 }
 
 .productForm .submitButton {
@@ -1239,11 +1256,59 @@ button:hover, button:active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-color: #235789;
+  background-color: #68ccfd;
 }
 
 .productForm .submitButton:focus, .productForm .submitButton:active {
   background-color: #f0f0f0;
   color: #235789;
+}
+
+button:disabled,
+button[disabled] {
+  display: none;
+}
+
+.productFormSlideIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formOverlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: rgba(45, 45, 45, 0.5);
+}
+
+.confirmationMessage {
+  position: absolute;
+  width: 50%;
+  height: 250px;
+  font-size: 4em;
+  display: none;
+  z-index: 20;
+  background-color: #FF0015;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.confirmationMessage .confirmationButton {
+  font-size: 1em;
+  margin: 1rem;
+}
+
+.confirmationMessage .noDelete {
+  color: #4C9B3F;
+}
+
+.confirmationMessage .yesDelete {
+  background-color: #fff;
+  color: #000;
 }
 /*# sourceMappingURL=App.css.map */

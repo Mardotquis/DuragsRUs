@@ -5,6 +5,7 @@ class Product extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     return (
       <section className="product__card_admin">
@@ -20,7 +21,12 @@ class Product extends Component {
         </div>
         <div className="product__controls_admin">
           <button className="product__edit_button">edit</button>
-          <button className="product__delete_button" >delete</button>
+          <button className="product__delete_button" onClick={() => this.props.deleteProduct(this.props.productId)}>delete</button>
+        </div>
+        <div className="confirmationMessage">
+          <p>Are you sure you would like to delete this product?</p>
+          <button className="confirmationButton noDelete" >no</button>
+          <button className="confirmationButton yesDelete">yes</button>
         </div>
       </section>
     );

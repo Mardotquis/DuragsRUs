@@ -94,7 +94,7 @@ class Products extends Component {
                 title={list.title}
                 imgSrc={list.productImages}
                 price={list.price}
-                handleQuanity={this.handleQuanity}
+                // handleQuanity={this.handleQuanity}
                 description={list.description}
               />
             );
