@@ -6,6 +6,7 @@ class ProductManager extends Component {
     super(props);
     this.state = {
       productsList: []
+
     };
   }
   componentDidMount() {
@@ -27,14 +28,14 @@ class ProductManager extends Component {
   }
 
   showFormModal = () => {
-    let addProductForm = document.querySelector(".productForm");
+    let productForm = document.querySelector(".productForm");
     let backgroundOverlay = document.querySelector(".formOverlay");
-    addProductForm.style.display = " flex";
+    productForm.style.display = " flex";
     backgroundOverlay.style.display = "block";
 
     window.onclick = function (event) {
       if (event.target === backgroundOverlay) {
-        addProductForm.style.display = 'none';
+        productForm.style.display = 'none';
         backgroundOverlay.style.display = "none";
       }
     };
@@ -47,52 +48,51 @@ class ProductManager extends Component {
   //   // let price = document.querySelector("#productPrice").value;
   //   // let productType = document.querySelector("#productType").value;
   //   // let productImages = document.querySelector("#productImgSrc").value;
-
-
-
   // }
-  deleteSingleProductHandler = (thisId) => {
 
+  // let url = `http://localhost:8080/products/${thisId}`;
+  // let card = document.querySelector(".product__card_admin");
+  // let delBtn = document.querySelector(".product__delete_button");
+
+  // // card.classList = "product__card_admin deletedCard";
+
+  // delBtn.disabled = true;
+  // card.style.display = 'none';
+  // console.log(`clicked on ${this.props._id}`)
+  // fetch(url, {
+  //   method: 'DELETE'
+  // })
+  // // window.location.reload();
+
+  deleteSingleProductHandler = (exucute, thisId) => {
+    let noBtn = document.querySelector(".noDelete");
+    let yesBtn = document.querySelector(".yesDelete");
+    let card = document.querySelector(".product__card_admin");
+    let delBtn = document.querySelector(".product__delete_button");
     let confirmationMessage = document.querySelector(".confirmationMessage");
     let backgroundOverlay = document.querySelector(".formOverlay");
-    let noBtn = document.querySelector(".noDelete").value;
-    let yesBtn = document.querySelector(".yesDelete");
-
-    confirmationMessage.style.display = "block";
-    backgroundOverlay.style.display = "block";
-    if (noBtn = "haha") {
-      console.log('no haha')
-      // return window.onclick = function (event) {
-      //   if (event.target === backgroundOverlay) {
-      //     confirmationMessage.style.display = 'none';
-      //     backgroundOverlay.style.display = "none";
-      //   }
-      // };
-    } else if (yesBtn) {
-      console.log('yes pressed')
+    // card.classList = "product__card_admin deletedCard";
+    if (exucute === 'yes') {
+      let url = `http://localhost:8080/products/${thisId}`;
+      fetch(url, {
+        method: 'DELETE'
+      });
+      window.location.reload();
     }
+    console.warn(`clicked `);
+    window.onclick = function (event) {
+      if (exucute === 'no' || event.target === backgroundOverlay) {
+        confirmationMessage.style.display = 'none';
+        backgroundOverlay.style.display = "none";
 
-    // let url = `http://localhost:8080/products/${thisId}`;
-    // let card = document.querySelector(".product__card_admin");
-    // let delBtn = document.querySelector(".product__delete_button");
-
-    // // card.classList = "product__card_admin deletedCard";
-
-    // delBtn.disabled = true;
-    // card.style.display = 'none';
-    // console.log(`clicked on ${this.props._id}`)
-    // fetch(url, {
-    //   method: 'DELETE'
-    // })
-    // // window.location.reload();
-  }
-
-
+      };
+    }
+  };
 
 
   render() {
     return (
-      <section className="products_manager_admin">
+      <main className="products_manager_admin">
         <div className="products__header_admin">
           <h1 className="product_manager__title_admin">product admin</h1>
           <div className="product__manager_controls_admin">
@@ -101,7 +101,7 @@ class ProductManager extends Component {
           </div>
         </div>
         <div className="formOverlay"></div>
-        <Form />
+        <Form formAction="http://localhost:8080/products" />
         <div className="products__list_item_admin">
           {this.state.productsList.map(quality => {
             return (
@@ -113,6 +113,8 @@ class ProductManager extends Component {
                 price={quality.price}
                 description={quality.description}
                 deleteProduct={this.deleteSingleProductHandler}
+                showFormModal={this.showFormModal}
+
               />
 
             );
@@ -120,7 +122,7 @@ class ProductManager extends Component {
         </div>
 
         <div className="errorHandler" />
-      </section>
+      </main>
     );
   }
 }

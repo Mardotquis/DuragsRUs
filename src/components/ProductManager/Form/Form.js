@@ -1,9 +1,11 @@
 import React from 'react';
-const Form = () => {
+const Form = (props) => {
     return (
-        <form className="productForm" method="POST" action="http://localhost:8080/products">
+
+        <form className="productForm" method="POST" action={props.formAction}>
+            <h1>{props.haha}jfiosjoifjsoi</h1>
             <label htmlFor="productTitle" />
-            <input type="text" id="productTitle" name="title" placeholder="product title" />
+            <input type="text" id="productTitle" name="title" placeholder={props.haha} />
 
             <label htmlFor="productDescription" />
             <input
