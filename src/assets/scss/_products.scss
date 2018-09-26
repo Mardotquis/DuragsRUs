@@ -3,7 +3,7 @@
   margin-left: 1em;
   font-family: $bodyfont;
 }
-.products__header {
+.products__header_admin {
   font-weight: bold;
 }
 .products__filter {
@@ -34,6 +34,7 @@
   margin-bottom: 0.35em;
 }
 .product__cards {
+
   letter-spacing: 1.5px;
   display: flex;
   flex-wrap: wrap;
@@ -41,6 +42,7 @@
   align-content: center;
   align-items: center;
   .product__card {
+
     position: relative;
     text-align: center;
     text-transform: uppercase;

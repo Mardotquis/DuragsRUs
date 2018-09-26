@@ -1,0 +1,184 @@
+.products_manager_admin {
+  margin-top: 16vh;
+  // background-color: $dark-grey;
+  // color: #fff;
+  font-family: $vt-font;
+  button {
+    font-family: $vt-font;
+    outline: none;
+    // color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    &:hover {
+      opacity: 0.7;
+    }
+}
+.products__list_item_admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products__header_admin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+
+
+  padding: 20px 0;
+}
+.product_manager__title_admin {
+  // font-size: 4em;
+  margin-left: 16px;
+  border-bottom: 3px solid #000;
+  display: inline;
+  font-size: 4em;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+  font-family: $vt-font;
+}
+.product__manager_controls_admin {
+  margin-right: 30px;
+  button {
+    font-size: 3em;
+    // width: 100px;
+
+    margin: 0 10px;
+  }
+  .add__product-btn {
+    background-color: $blue;
+    &:focus,
+    &:active {
+      background-color: #f0f0f0;
+      color: $blue;
+    }
+  }
+
+}
+.product__card_admin {
+  box-shadow: 0 7px 4px #777;
+  border-bottom: 5px solid $dark-grey;
+  border-top: 5px solid $dark-grey;
+  width: 86%;
+  height: 230px;
+  border-radius: 20px;
+  background-color: #fff;
+  // border: red solid 3px;
+  margin: 2em 0;
+  color: #000;
+  letter-spacing: 3px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+}
+.proudct__top_info_admin {
+  align-self: flex-start;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.product_id_admin {
+  margin-top: 30px;
+  font-size: 1.45em;
+}
+.product__title_admin {
+  align-self: flex-start;
+  font-size: 3em;
+  width: 250px;
+  text-transform: uppercase;
+}
+.product__middle {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  flex-grow: 2;
+  justify-content: space-around;
+}
+.product__img_admin {
+  height: 150px;
+  width: auto;
+  //   justify-self: flex-start;
+}
+.product__description_admin {
+  width: 60%;
+  font-size: 1.75em;
+  text-align: center;
+}
+.product__price_admin {
+  font-size: 5em;
+  margin-right: 30px;
+}
+
+.product__controls_admin {
+  margin-right: 10px;
+  button {
+    font-family: $vt-font;
+    font-size: 2em;
+    width: 120px;
+    outline: none;
+    // color: #fff;
+    border-radius: 20px;
+    padding: 5px 0;
+    margin: 5px 0;
+    text-transform: uppercase;
+  }
+  .product__edit_button {
+    background-color: $green;
+    &:focus,
+    &:active {
+      background-color: #f0f0f0;
+      color: $green;
+    }
+  }
+  .product__delete_button {
+    background-color: $red;
+    &:focus,
+    &:active {
+      background-color: #f0f0f0;
+      color: $red;
+    }
+  }
+}
+
+}
+
+.productForm {
+	box-shadow: 0 7px 4px #777;
+  ::placeholder{
+    text-transform: uppercase;
+  }
+
+  background-color: red;
+  height: 300px;
+  width: 50%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  input {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    align-self: center;
+    font-size: 3em;
+    font-family: $vt-font;
+    border-radius: 5px;
+
+  }
+  .submitButton {
+    width: 35%;
+    font-size: 2.5em;
+    margin: 10px;
+    // height: 30px;
+    align-self: center;
+    background-color: $blue;
+    &:focus,
+    &:active {
+      background-color: #f0f0f0;
+      color: $blue;
+    }
+  }
+}

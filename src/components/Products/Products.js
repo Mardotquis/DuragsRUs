@@ -67,7 +67,7 @@ class Products extends Component {
 
     return (
       <div className="products">
-        <h1 className="products__header">Products</h1>
+        <h1 className="products__header_admin">Products</h1>
 
         <div className="products__filter">
           <form className="products__form" onChange={this.filterProducts}>

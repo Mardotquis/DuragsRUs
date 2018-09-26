@@ -27,8 +27,13 @@ const Header = () => {
             Contact
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/admin" >
+            <div className="accountToggle"></div>
+          </NavLink>
+        </li>
       </ul>
-    </nav>
+    </nav >
   );
 };
 

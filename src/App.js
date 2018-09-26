@@ -6,6 +6,7 @@ import Products from "./components/Products/Products";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ProductManager from "./components/ProductManager/ProductManager";
 import Error from "./components/Error/Error";
 import "./assets/css/App.css";
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
 
             <Route path="/contact" component={Contact} />
 
+            <Route path="/admin" component={ProductManager} />
             <Route component={Error} />
           </Switch>
           <Footer />

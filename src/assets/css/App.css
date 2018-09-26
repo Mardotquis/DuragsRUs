@@ -210,6 +210,21 @@ h1 {
   }
 }
 
+.accountToggle {
+  background-image: url("../img/account.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 650px) {
+  .accountToggle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .header__extralinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,6 +239,9 @@ h1 {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__extralinks a,
@@ -448,7 +466,7 @@ h1 {
   font-family: "Kosugi", sans-serif;
 }
 
-.products__header {
+.products__header_admin {
   font-weight: bold;
 }
 
@@ -985,5 +1003,247 @@ button:hover, button:active {
   .footer__payment_options i {
     padding: 0 3px;
   }
+}
+
+.products_manager_admin {
+  margin-top: 16vh;
+  font-family: "VT323", monospace;
+}
+
+.products_manager_admin button {
+  font-family: "VT323", monospace;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.products_manager_admin button:hover {
+  opacity: 0.7;
+}
+
+.products_manager_admin .products__list_item_admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products_manager_admin .products__header_admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.products_manager_admin .product_manager__title_admin {
+  margin-left: 16px;
+  border-bottom: 3px solid #000;
+  display: inline;
+  font-size: 4em;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+  font-family: "VT323", monospace;
+}
+
+.products_manager_admin .product__manager_controls_admin {
+  margin-right: 30px;
+}
+
+.products_manager_admin .product__manager_controls_admin button {
+  font-size: 3em;
+  margin: 0 10px;
+}
+
+.products_manager_admin .product__manager_controls_admin .add__product-btn {
+  background-color: #235789;
+}
+
+.products_manager_admin .product__manager_controls_admin .add__product-btn:focus, .products_manager_admin .product__manager_controls_admin .add__product-btn:active {
+  background-color: #f0f0f0;
+  color: #235789;
+}
+
+.products_manager_admin .product__card_admin {
+  -webkit-box-shadow: 0 7px 4px #777;
+          box-shadow: 0 7px 4px #777;
+  border-bottom: 5px solid #2D2D2D;
+  border-top: 5px solid #2D2D2D;
+  width: 86%;
+  height: 230px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 2em 0;
+  color: #000;
+  letter-spacing: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.products_manager_admin .proudct__top_info_admin {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.products_manager_admin .product_id_admin {
+  margin-top: 30px;
+  font-size: 1.45em;
+}
+
+.products_manager_admin .product__title_admin {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 3em;
+  width: 250px;
+  text-transform: uppercase;
+}
+
+.products_manager_admin .product__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.products_manager_admin .product__img_admin {
+  height: 150px;
+  width: auto;
+}
+
+.products_manager_admin .product__description_admin {
+  width: 60%;
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.products_manager_admin .product__price_admin {
+  font-size: 5em;
+  margin-right: 30px;
+}
+
+.products_manager_admin .product__controls_admin {
+  margin-right: 10px;
+}
+
+.products_manager_admin .product__controls_admin button {
+  font-family: "VT323", monospace;
+  font-size: 2em;
+  width: 120px;
+  outline: none;
+  border-radius: 20px;
+  padding: 5px 0;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.products_manager_admin .product__controls_admin .product__edit_button {
+  background-color: #4C9B3F;
+}
+
+.products_manager_admin .product__controls_admin .product__edit_button:focus, .products_manager_admin .product__controls_admin .product__edit_button:active {
+  background-color: #f0f0f0;
+  color: #4C9B3F;
+}
+
+.products_manager_admin .product__controls_admin .product__delete_button {
+  background-color: #FF0015;
+}
+
+.products_manager_admin .product__controls_admin .product__delete_button:focus, .products_manager_admin .product__controls_admin .product__delete_button:active {
+  background-color: #f0f0f0;
+  color: #FF0015;
+}
+
+.productForm {
+  -webkit-box-shadow: 0 7px 4px #777;
+          box-shadow: 0 7px 4px #777;
+  background-color: red;
+  height: 300px;
+  width: 50%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.productForm ::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+.productForm :-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.productForm ::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.productForm ::placeholder {
+  text-transform: uppercase;
+}
+
+.productForm input {
+  text-align: center;
+  width: 50%;
+  height: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3em;
+  font-family: "VT323", monospace;
+  border-radius: 5px;
+}
+
+.productForm .submitButton {
+  width: 35%;
+  font-size: 2.5em;
+  margin: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #235789;
+}
+
+.productForm .submitButton:focus, .productForm .submitButton:active {
+  background-color: #f0f0f0;
+  color: #235789;
 }
 /*# sourceMappingURL=App.css.map */

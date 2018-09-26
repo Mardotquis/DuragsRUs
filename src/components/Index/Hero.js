@@ -28,6 +28,7 @@ class HeroImg extends Component {
     }
   };
 
+
   componentDidMount() {
     this.heroSlider();
 
