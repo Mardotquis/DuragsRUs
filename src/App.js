@@ -7,15 +7,17 @@ import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductManager from "./components/ProductManager/ProductManager";
+import ContactAdmin from "./components/ProductManager/ContactAdmin/ContactAdmin";
 import Error from "./components/Error/Error";
 import "./assets/css/App.css";
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       ProductsJSON: [],
       filteredProducts: [],
-
+      loading: true
     };
   }
   componentDidMount() {
@@ -24,14 +26,16 @@ class App extends Component {
       .then((resp) => resp.json())
       .then((data) => {
         this.setState({
-          ProductsJSON: data
+          ProductsJSON: data,
+          loading: false
         }, () => console.log(this.state.ProductsJSON)
         )
       })
       .catch((error) => {
         console.warn('ERROR')
         const errorHTML = "<h2>Sorry, an error has occured with fetching products...";
-        document.querySelector('.errorHandler').innerHTML = errorHTML
+        document.querySelector('.errorHandler').innerHTML = errorHTML;
+        this.setState({ loading: false });
       })
   };
   filterProducts = () => {
@@ -62,6 +66,9 @@ class App extends Component {
     });
   };
   render() {
+    if (this.state.loading) {
+      return null;
+    }
     let newProducts = [];
 
     if (this.state.filteredProducts.length === 0) {
@@ -83,7 +90,12 @@ class App extends Component {
 
             <Route path="/contact" component={Contact} />
 
-            <Route path="/admin" component={ProductManager} />
+            <Route path="/admin" render={() => (
+              <ProductManager products={this.state.ProductsJSON} />
+            )} />
+            <Route path="/admin/contact" render={() => (
+              <ContactAdmin products={this.state.ProductsJSON} />
+            )} />
             <Route component={Error} />
           </Switch>
           <Footer />

@@ -1,8 +1,8 @@
 import React from 'react';
-const Form = (props) => {
+const EditForm = (props) => {
     return (
 
-        <form className="newProduct" id={props.id} method="POST" action={props.formAction}>
+        <form className="newProduct" method="POST" action={props.formAction}>
             {/* <h1>{props.haha}jfiosjoifjsoi</h1> */}
             <label htmlFor="productTitle" />
             <input type="text" id="productTitle" name="title" placeholder={props.title} />
@@ -32,4 +32,4 @@ const Form = (props) => {
         </form>)
 }
 
-export default Form;
+export default EditForm;

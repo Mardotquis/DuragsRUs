@@ -145,7 +145,7 @@
 
 }
 
-.productForm {
+.productForm,.newProduct, .editProduct {
 	box-shadow: 0 7px 4px #777;
   ::placeholder{
     text-transform: uppercase;
@@ -236,4 +236,16 @@ margin: 1rem;
   background-color: #fff;
 color: #000;
 }
+};
+
+.flex{
+  display: flex;
+}
+
+.block{
+  display: block;
+}
+
+.none{
+  display: none;
 }

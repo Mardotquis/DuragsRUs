@@ -18,18 +18,18 @@ const Contact = () => {
           Email: <a href="mailto:duragsrus@gmail.com">duragsrus@gmail.com</a>
         </p>
       </div>
-      <form className="contact__form">
+      <form className="contact__form" method="POST" action="http://localhost:8080/contact" required>
         <label htmlFor="cusName">Name:</label>
-        <input id="cusName" type="text" />
+        <input id="cusName" type="text" name="customerName" />
 
         <label htmlFor="cusEmail">Email:</label>
-        <input id="cusEmail" type="email" />
+        <input id="cusEmail" type="email" name="customerEmail" />
 
         <label htmlFor="cusPhone">Phone Number:</label>
-        <input id="cusPhone" type="Number" />
+        <input id="cusPhone" type="Number" name="customerPhoneNum" />
 
         <label htmlFor="cusMessage">Message:</label>
-        <textarea id="cusMessage" type="text" />
+        <textarea id="cusMessage" type="text" name="customerMessage" />
 
         <input type="submit" id="submitButton" />
       </form>

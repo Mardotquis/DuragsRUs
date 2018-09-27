@@ -32,6 +32,7 @@ const Header = () => {
             <div className="accountToggle"></div>
           </NavLink>
         </li>
+
       </ul>
     </nav >
   );

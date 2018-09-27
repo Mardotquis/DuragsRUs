@@ -1,24 +1,24 @@
 import React from "react";
 import Form from '../Form/Form';
+// import EditForm from "../Form/EditForm";
+
 
 const Product = (props) => {
-
-
   const toggleState = () => {
     let confirmationMessage = document.querySelector(".confirmationMessage");
     let overlay = document.querySelector(".formOverlay");
-    confirmationMessage.style.display = 'block';
-    overlay.style.display = 'block'
+    confirmationMessage.style.display = ("block");
+    overlay.style.display = ("block")
   }
 
   const editProductInformation = (e) => {
     e.preventDefault();
-    props.showFormModal();
+    props.showFormModal(props.productId);
     // document.querySelector(".productForm").style.display = "flex";
 
   }
 
-
+  // console.log(allan)
   return (
     <section className="product__card_admin">
       <div className="proudct__top_info_admin">
@@ -40,8 +40,9 @@ const Product = (props) => {
         <button className="confirmationButton noDelete" onClick={() => props.deleteProduct("no", props.productId)}>no</button>
         <button className="confirmationButton yesDelete" onClick={() => props.deleteProduct("yes", props.productId)}>yes</button>
         <Form
-          haha={props.title}
-
+          title={props.title}
+          description={props.description}
+          id={props.productId}
         />
       </div>
     </section>

@@ -1188,7 +1188,7 @@ button:hover, button:active {
   color: #FF0015;
 }
 
-.productForm {
+.productForm, .newProduct, .editProduct {
   -webkit-box-shadow: 0 7px 4px #777;
           box-shadow: 0 7px 4px #777;
   position: fixed;
@@ -1212,27 +1212,27 @@ button:hover, button:active {
   border-radius: 30px;
 }
 
-.productForm ::-webkit-input-placeholder {
+.productForm ::-webkit-input-placeholder, .newProduct ::-webkit-input-placeholder, .editProduct ::-webkit-input-placeholder {
   text-transform: uppercase;
   color: #a14617;
 }
 
-.productForm :-ms-input-placeholder {
+.productForm :-ms-input-placeholder, .newProduct :-ms-input-placeholder, .editProduct :-ms-input-placeholder {
   text-transform: uppercase;
   color: #a14617;
 }
 
-.productForm ::-ms-input-placeholder {
+.productForm ::-ms-input-placeholder, .newProduct ::-ms-input-placeholder, .editProduct ::-ms-input-placeholder {
   text-transform: uppercase;
   color: #a14617;
 }
 
-.productForm ::placeholder {
+.productForm ::placeholder, .newProduct ::placeholder, .editProduct ::placeholder {
   text-transform: uppercase;
   color: #a14617;
 }
 
-.productForm input {
+.productForm input, .newProduct input, .editProduct input {
   color: #fff;
   text-align: center;
   width: 50%;
@@ -1249,7 +1249,7 @@ button:hover, button:active {
   border-bottom: 1px solid #fff;
 }
 
-.productForm .submitButton {
+.productForm .submitButton, .newProduct .submitButton, .editProduct .submitButton {
   width: 35%;
   font-size: 2.5em;
   margin: 10px;
@@ -1259,7 +1259,7 @@ button:hover, button:active {
   background-color: #68ccfd;
 }
 
-.productForm .submitButton:focus, .productForm .submitButton:active {
+.productForm .submitButton:focus, .productForm .submitButton:active, .newProduct .submitButton:focus, .newProduct .submitButton:active, .editProduct .submitButton:focus, .editProduct .submitButton:active {
   background-color: #f0f0f0;
   color: #235789;
 }
@@ -1310,5 +1310,19 @@ button[disabled] {
 .confirmationMessage .yesDelete {
   background-color: #fff;
   color: #000;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
 }
 /*# sourceMappingURL=App.css.map */
