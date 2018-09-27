@@ -10,6 +10,8 @@ import ProductManager from "./components/ProductManager/ProductManager";
 import ContactAdmin from "./components/ProductManager/ContactAdmin/ContactAdmin";
 import Error from "./components/Error/Error";
 import "./assets/css/App.css";
+import Callback from "./Callback";
+import SecuredRoute from "./SecuredRoute/SecuredRoute";
 
 class App extends Component {
   constructor() {
@@ -90,12 +92,15 @@ class App extends Component {
 
             <Route path="/contact" component={Contact} />
 
-            <Route path="/admin" render={() => (
+            <Route exact path='/callback' component={Callback} />
+
+            {/* <SecuredRoute path="/admin" render={() => (
               <ProductManager products={this.state.ProductsJSON} />
-            )} />
-            <Route path="/admin/contact" render={() => (
+            )} /> */}
+            <SecuredRoute path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
+            {/* <Route path="/admin/contact" render={() => (
               <ContactAdmin products={this.state.ProductsJSON} />
-            )} />
+            )} /> */}
             <Route component={Error} />
           </Switch>
           <Footer />

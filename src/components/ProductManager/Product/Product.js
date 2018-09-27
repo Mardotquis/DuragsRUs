@@ -18,7 +18,7 @@ const Product = (props) => {
 
   }
 
-  // console.log(allan)
+
   return (
     <section className="product__card_admin">
       <div className="proudct__top_info_admin">

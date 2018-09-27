@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import auth0Client from "../../Auth/Auth";
+
 const Header = () => {
   return (
     <nav className="header">
@@ -33,6 +35,13 @@ const Header = () => {
           </NavLink>
         </li>
 
+        {/* AUTH0 */}
+        {!auth0Client.isAuthenticated() && (
+          <button className="header__auth" onClick={auth0Client.signIn} >Log In</button>
+        )}
+        {auth0Client.isAuthenticated() && (
+          <button className="header__auth" onClick={auth0Client.signOut} >Log Out</button>
+        )}
       </ul>
     </nav >
   );
