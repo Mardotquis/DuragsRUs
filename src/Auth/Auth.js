@@ -49,13 +49,14 @@ class Auth {
 
     signIn() {
         this.auth0.authorize();
+
     }
 
     signOut() {
         // clear id token, profile, and expiration
-        // this.idToken = null;
-        // this.profile = null;
-        // this.expiresAt = null;
+        this.idToken = null;
+        this.profile = null;
+        this.expiresAt = null;
         this.auth0.logout();
         this.props.history.replace('/');
     }

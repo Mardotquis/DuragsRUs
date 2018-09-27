@@ -16,7 +16,7 @@ const Product = (props) => {
     props.showFormModal(props.productId);
     // document.querySelector(".productForm").style.display = "flex";
 
-  }
+  };
 
 
   return (

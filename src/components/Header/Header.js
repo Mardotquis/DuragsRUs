@@ -29,11 +29,16 @@ const Header = () => {
             Contact
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/admin" >
             <div className="accountToggle"></div>
           </NavLink>
-        </li>
+        </li> */}
+        {auth0Client.isAuthenticated() ? (
+          <li>
+            <NavLink to="/admin" className="accountToggle"> </NavLink>
+          </li>
+        ) : null}
 
         {/* AUTH0 */}
         {!auth0Client.isAuthenticated() && (
@@ -42,6 +47,7 @@ const Header = () => {
         {auth0Client.isAuthenticated() && (
           <button className="header__auth" onClick={auth0Client.signOut} >Log Out</button>
         )}
+
       </ul>
     </nav >
   );

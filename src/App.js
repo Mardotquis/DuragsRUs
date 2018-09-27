@@ -12,6 +12,8 @@ import Error from "./components/Error/Error";
 import "./assets/css/App.css";
 import Callback from "./Callback";
 import SecuredRoute from "./SecuredRoute/SecuredRoute";
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class App extends Component {
   constructor() {
