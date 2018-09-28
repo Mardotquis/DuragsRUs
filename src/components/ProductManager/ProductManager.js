@@ -2,33 +2,26 @@ import React from "react";
 import Product from "./Product/Product";
 import Form from "./Form/Form";
 const ProductManager = (props) => {
-
-  // componentDidMount() {
-  //   const url = "http://localhost:8080/products";
-  //   fetch(url)
-  //     .then(resp => resp.json())
-  //     .then(data => {
-  //       this.setState({
-  //         productsList: data
-  //       });
-  //     })
-  //     .catch(error => {
-  //       console.warn("ERROR");
-  //       const errorHTML =
-  //         "<h2>Sorry, an error has occured with fetching products...";
-  //       document.querySelector(".errorHandler").innerHTML = errorHTML;
-  //     });
-  // }
+  console.log(props)
+  // const toggleModal = () => {
+  //   let modal = document.querySelector(".formOverlay");
+  //   if (modal.style.display === "none" || modal.style.display === " ") {
+  //     modal.style.display = "block"
+  //   } else {
+  //     modal.style.display = "none"
+  //   }
+  // };
 
   const showFormModal = (id) => {
     console.log("clicked")
     let backgroundOverlay = document.querySelector(".formOverlay");
-    backgroundOverlay.style.display = ("block");
-
-
     let productForm = document.getElementById(`${id}`);
-    productForm.style.display = ("flex");
-    console.log(productForm)
+    // let ethan = document.querySelector('.confirmationMessage');
+    backgroundOverlay.style.display = ("block");
+    console.log(productForm, id);
+    productForm.style.display = "flex";
+
+    // ethan.style.display = "block";
 
     // else if (type === "editForm") {
     //   console.log("edit form");
@@ -37,59 +30,48 @@ const ProductManager = (props) => {
 
     window.onclick = function (event) {
       if (event.target === backgroundOverlay) {
-        productForm.style.display = ('none');
-
+        productForm.style.display = "none";
         backgroundOverlay.style.display = ("none");
       }
     };
+    // const overlayy = Array.from(document.getElementsByClassName('formOverlay'))[0]
+    // overlayy.style.display = "block"
+
+    // const form = Array.from(document.getElementsByClassName("newProduct"))[0]
+    // form.classList.add('flex')
   };
 
-  // submitForm = (e) => {
-  //   // e.preventDefault();
-  //   // let title = document.querySelector("#productTitle").value;
-  //   // let description = document.querySelector("#productDescription").value;
-  //   // let price = document.querySelector("#productPrice").value;
-  //   // let productType = document.querySelector("#productType").value;
-  //   // let productImages = document.querySelector("#productImgSrc").value;
-  // }
 
-  // let url = `http://localhost:8080/products/${thisId}`;
-  // let card = document.querySelector(".product__card_admin");
-  // let delBtn = document.querySelector(".product__delete_button");
 
-  // // card.classList = "product__card_admin deletedCard";
+  const deleteSingleProductHandler = (execute, thisId) => {
 
-  // delBtn.disabled = true;
-  // card.style.display = 'none';
-  // console.log(`clicked on ${this.props._id}`)
-  // fetch(url, {
-  //   method: 'DELETE'
-  // })
-  // // window.location.reload();
+    let deleteMessage = document.getElementById(`${thisId}`);
+    // let backgroundOverlay = document.querySelector(".confirmationMessage");
+    let overlay = document.querySelector(".formOverlay");
+    console.warn(`clicked`);
+    // confirmationMessage.style.display = ("block");
+    overlay.style.display = ("block");
 
-  const deleteSingleProductHandler = (exucute, thisId) => {
-    // let noBtn = document.querySelector(".noDelete");
-    // let yesBtn = document.querySelector(".yesDelete");
-    // let card = document.querySelector(".product__card_admin");
-    // let delBtn = document.querySelector(".product__delete_button");
-    let confirmationMessage = document.querySelector(".confirmationMessage");
-    let backgroundOverlay = document.querySelector(".formOverlay");
-    // card.classList = "product__card_admin deletedCard";
-    if (exucute === 'yes') {
+    if (execute === 'yes') {
       let url = `http://localhost:8080/products/${thisId}`;
       fetch(url, {
         method: 'DELETE'
       });
       window.location.reload();
-    }
-    console.warn(`clicked `);
-    window.onclick = function (event) {
-      if (exucute === 'no' || event.target === backgroundOverlay) {
-        confirmationMessage.style.display = "none";
-        backgroundOverlay.style.display = "none";
+    } else if (execute === 'no') {
+      deleteMessage.style.display = "none";
+      // backgroundOverlay.style.display = "none";
 
-      };
+      overlay.style.display = ("none");
+
     }
+
+    // window.onclick = function (event) {
+    //   if (event.target === backgroundOverlay) {
+    //     deleteMessage.style.display = "none";
+    //     // backgroundOverlay.style.display = ("none");
+    //   }
+    // };
   };
 
 
@@ -103,8 +85,8 @@ const ProductManager = (props) => {
 
         </div>
       </div>
-      <div className="formOverlay"></div>
-      <Form formAction="http://localhost:8080/products" id={"newForm"} />
+      <div className="formOverlay" ></div>
+      {/* <Form formAction="http://localhost:8080/products" id={"newForm"} formMethod="POST" /> */}
       <div className="products__list_item_admin">
         {props.products.map(quality => {
           return (
@@ -115,6 +97,7 @@ const ProductManager = (props) => {
               imgSrc={quality.productImages}
               price={quality.price}
               description={quality.description}
+              productType={props.productType}
               deleteProduct={deleteSingleProductHandler}
               showFormModal={showFormModal}
 

@@ -145,49 +145,55 @@
 
 }
 
-.productForm,.newProduct, .editProduct {
+.productForm,.newProduct, .editProduct, #newForm {
+  padding: 10px 0;
 	box-shadow: 0 7px 4px #777;
   ::placeholder{
     text-transform: uppercase;
-    color: $browngold;
+    color: $dark-grey;
   }
 position: fixed;
 z-index: 20;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
-background-color: $browngold;
-  height: 400px;
-  width: 50%;
+background-color: #fff;
+  height: 520px;
+  width: 70%;
 // background-color: rgba($color: #000000, $alpha:.51);
 // background-color: rgba($color: #000000, $alpha: 1);
   display: none;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin: 0 auto;
 border-radius: 30px;
-  input {
-    color: #fff;
-    text-align: center;
-    width: 50%;
-    height: 30px;
-    align-self: center;
-    font-size: 3em;
-    font-family: $vt-font;
-    border-radius: 5px;
-    background-color: $babyblue;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #fff;
 
+  input,textarea {
+    height: 90px;
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid #eee;
+    font-size: 2em;
+    font-family: $vt-font;
+    text-align: center;
+    margin: 0 auto;
+    &:focus{
+outline: 2px solid $dark-grey;
+    }
+  }
+  textarea{
+    height: 120px !important;
+    resize: none;
   }
   .submitButton {
     width: 35%;
-    font-size: 2.5em;
-    margin: 10px;
-    // height: 30px;
+    font-size: 2.75em;
+    margin: 20px 0;
+
     align-self: center;
-    background-color: $babyblue;
+    background-color: #000;
+    vertical-align: center;
+    color: #fff;
     &:focus,
     &:active {
       background-color: #f0f0f0;
@@ -204,7 +210,7 @@ button[disabled]{
 .productFormSlideIn{
   display: flex;
 }
-.formOverlay{
+.formOverlay, .deleteOverlay{
   height: 100%;
   width: 100%;
   display: none;
@@ -212,7 +218,7 @@ button[disabled]{
   z-index: 10;
   top: 0;
   right: 0;
-  background-color: rgba($color: $dark-grey, $alpha: .5)
+  background-color: rgba($color: $dark-grey, $alpha: .7)
 }
 
 .confirmationMessage{
@@ -238,14 +244,3 @@ color: #000;
 }
 };
 
-.flex{
-  display: flex;
-}
-
-.block{
-  display: block;
-}
-
-.none{
-  display: none;
-}

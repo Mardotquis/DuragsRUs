@@ -2,21 +2,35 @@ import React from "react";
 import Form from '../Form/Form';
 // import EditForm from "../Form/EditForm";
 
-
 const Product = (props) => {
-  const toggleState = () => {
-    let confirmationMessage = document.querySelector(".confirmationMessage");
+  // const toggleModal = () => {
+  //   let modal = document.querySelector(".confirmationMessage");
+  //   if (modal.style.display === "none" || modal.style.display === " ") {
+  //     modal.style.display = "block"
+  //   } else {
+  //     modal.style.display = "none"
+  //   }
+  // };
+  const toggleDelete = () => {
+    let confirmationMessage = document.getElementById(`${props.productId}`);
     let overlay = document.querySelector(".formOverlay");
     confirmationMessage.style.display = ("block");
-    overlay.style.display = ("block")
-  }
+    overlay.style.display = ("block");
+  };
 
   const editProductInformation = (e) => {
-    e.preventDefault();
-    props.showFormModal(props.productId);
-    // document.querySelector(".productForm").style.display = "flex";
 
+    e.preventDefault();
+    const formId = Array.from(e.target.parentNode.parentNode.children).pop().id
+    props.showFormModal(formId);
+    // document.querySelector(".productForm").style.display = "flex";
   };
+
+  const formatProductName = (productName) => {
+    const randomNumber = Math.round(Math.random() * 100);
+    const spaces = /\s/g;
+    return `${productName.replace(spaces, "-").toLowerCase()}${randomNumber}`;
+  }
 
 
   return (
@@ -33,18 +47,24 @@ const Product = (props) => {
       </div>
       <div className="product__controls_admin">
         <button className="product__edit_button" onClick={editProductInformation}>edit</button>
-        <button className="product__delete_button" onClick={toggleState} > delete</button>
+        <button className="product__delete_button" onClick={toggleDelete} > delete</button>
       </div>
-      <div className="confirmationMessage">
+      <div className="confirmationMessage" id={props.productId} >
         <p>Are you sure you would like to delete this product?</p>
         <button className="confirmationButton noDelete" onClick={() => props.deleteProduct("no", props.productId)}>no</button>
         <button className="confirmationButton yesDelete" onClick={() => props.deleteProduct("yes", props.productId)}>yes</button>
-        <Form
-          title={props.title}
-          description={props.description}
-          id={props.productId}
-        />
       </div>
+      <Form
+        title={props.title}
+        description={props.description}
+        id={formatProductName(props.title)}
+        price={props.price}
+        img={props.imgSrc}
+        productType={props.productType}
+        formAction={`http://localhost:8080/products/${props.productId}`}
+        formMethod={"POST"}
+        productId={props.productId}
+      />
     </section>
   );
 }

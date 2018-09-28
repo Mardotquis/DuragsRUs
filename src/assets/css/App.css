@@ -1189,7 +1189,8 @@ button:hover, button:active {
   color: #FF0015;
 }
 
-.productForm, .newProduct, .editProduct {
+.productForm, .newProduct, .editProduct, #newForm {
+  padding: 10px 0;
   -webkit-box-shadow: 0 7px 4px #777;
           box-shadow: 0 7px 4px #777;
   position: fixed;
@@ -1198,69 +1199,71 @@ button:hover, button:active {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #a14617;
-  height: 400px;
-  width: 50%;
+  background-color: #fff;
+  height: 520px;
+  width: 70%;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0 auto;
   border-radius: 30px;
 }
 
-.productForm ::-webkit-input-placeholder, .newProduct ::-webkit-input-placeholder, .editProduct ::-webkit-input-placeholder {
+.productForm ::-webkit-input-placeholder, .newProduct ::-webkit-input-placeholder, .editProduct ::-webkit-input-placeholder, #newForm ::-webkit-input-placeholder {
   text-transform: uppercase;
-  color: #a14617;
+  color: #2D2D2D;
 }
 
-.productForm :-ms-input-placeholder, .newProduct :-ms-input-placeholder, .editProduct :-ms-input-placeholder {
+.productForm :-ms-input-placeholder, .newProduct :-ms-input-placeholder, .editProduct :-ms-input-placeholder, #newForm :-ms-input-placeholder {
   text-transform: uppercase;
-  color: #a14617;
+  color: #2D2D2D;
 }
 
-.productForm ::-ms-input-placeholder, .newProduct ::-ms-input-placeholder, .editProduct ::-ms-input-placeholder {
+.productForm ::-ms-input-placeholder, .newProduct ::-ms-input-placeholder, .editProduct ::-ms-input-placeholder, #newForm ::-ms-input-placeholder {
   text-transform: uppercase;
-  color: #a14617;
+  color: #2D2D2D;
 }
 
-.productForm ::placeholder, .newProduct ::placeholder, .editProduct ::placeholder {
+.productForm ::placeholder, .newProduct ::placeholder, .editProduct ::placeholder, #newForm ::placeholder {
   text-transform: uppercase;
-  color: #a14617;
+  color: #2D2D2D;
 }
 
-.productForm input, .newProduct input, .editProduct input {
-  color: #fff;
-  text-align: center;
-  width: 50%;
-  height: 30px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-size: 3em;
-  font-family: "VT323", monospace;
-  border-radius: 5px;
-  background-color: #68ccfd;
-  outline: none;
+.productForm input, .productForm textarea, .newProduct input, .newProduct textarea, .editProduct input, .editProduct textarea, #newForm input, #newForm textarea {
+  height: 90px;
+  width: 70%;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #eee;
+  font-size: 2em;
+  font-family: "VT323", monospace;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.productForm .submitButton, .newProduct .submitButton, .editProduct .submitButton {
+.productForm input:focus, .productForm textarea:focus, .newProduct input:focus, .newProduct textarea:focus, .editProduct input:focus, .editProduct textarea:focus, #newForm input:focus, #newForm textarea:focus {
+  outline: 2px solid #2D2D2D;
+}
+
+.productForm textarea, .newProduct textarea, .editProduct textarea, #newForm textarea {
+  height: 120px !important;
+  resize: none;
+}
+
+.productForm .submitButton, .newProduct .submitButton, .editProduct .submitButton, #newForm .submitButton {
   width: 35%;
-  font-size: 2.5em;
-  margin: 10px;
+  font-size: 2.75em;
+  margin: 20px 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-color: #68ccfd;
+  background-color: #000;
+  vertical-align: center;
+  color: #fff;
 }
 
-.productForm .submitButton:focus, .productForm .submitButton:active, .newProduct .submitButton:focus, .newProduct .submitButton:active, .editProduct .submitButton:focus, .editProduct .submitButton:active {
+.productForm .submitButton:focus, .productForm .submitButton:active, .newProduct .submitButton:focus, .newProduct .submitButton:active, .editProduct .submitButton:focus, .editProduct .submitButton:active, #newForm .submitButton:focus, #newForm .submitButton:active {
   background-color: #f0f0f0;
   color: #235789;
 }
@@ -1276,7 +1279,7 @@ button[disabled] {
   display: flex;
 }
 
-.formOverlay {
+.formOverlay, .deleteOverlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -1284,7 +1287,7 @@ button[disabled] {
   z-index: 10;
   top: 0;
   right: 0;
-  background-color: rgba(45, 45, 45, 0.5);
+  background-color: rgba(45, 45, 45, 0.7);
 }
 
 .confirmationMessage {
@@ -1311,19 +1314,5 @@ button[disabled] {
 .confirmationMessage .yesDelete {
   background-color: #fff;
   color: #000;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.block {
-  display: block;
-}
-
-.none {
-  display: none;
 }
 /*# sourceMappingURL=App.css.map */
