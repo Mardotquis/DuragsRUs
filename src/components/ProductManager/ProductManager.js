@@ -16,29 +16,21 @@ const ProductManager = (props) => {
     console.log("clicked")
     let backgroundOverlay = document.querySelector(".formOverlay");
     let productForm = document.getElementById(`${id}`);
-    // let ethan = document.querySelector('.confirmationMessage');
+
     backgroundOverlay.style.display = ("block");
     console.log(productForm, id);
     productForm.style.display = "flex";
 
-    // ethan.style.display = "block";
 
-    // else if (type === "editForm") {
-    //   console.log("edit form");
-
-    // }
 
     window.onclick = function (event) {
       if (event.target === backgroundOverlay) {
         productForm.style.display = "none";
         backgroundOverlay.style.display = ("none");
+        console.log('OVERLAY CLOSED')
       }
     };
-    // const overlayy = Array.from(document.getElementsByClassName('formOverlay'))[0]
-    // overlayy.style.display = "block"
 
-    // const form = Array.from(document.getElementsByClassName("newProduct"))[0]
-    // form.classList.add('flex')
   };
 
 
@@ -46,10 +38,8 @@ const ProductManager = (props) => {
   const deleteSingleProductHandler = (execute, thisId) => {
 
     let deleteMessage = document.getElementById(`${thisId}`);
-    // let backgroundOverlay = document.querySelector(".confirmationMessage");
     let overlay = document.querySelector(".formOverlay");
     console.warn(`clicked`);
-    // confirmationMessage.style.display = ("block");
     overlay.style.display = ("block");
 
     if (execute === 'yes') {
@@ -60,18 +50,11 @@ const ProductManager = (props) => {
       window.location.reload();
     } else if (execute === 'no') {
       deleteMessage.style.display = "none";
-      // backgroundOverlay.style.display = "none";
-
       overlay.style.display = ("none");
 
     }
 
-    // window.onclick = function (event) {
-    //   if (event.target === backgroundOverlay) {
-    //     deleteMessage.style.display = "none";
-    //     // backgroundOverlay.style.display = ("none");
-    //   }
-    // };
+
   };
 
 
@@ -86,7 +69,7 @@ const ProductManager = (props) => {
         </div>
       </div>
       <div className="formOverlay" ></div>
-      {/* <Form formAction="http://localhost:8080/products" id={"newForm"} formMethod="POST" /> */}
+      <Form formAction="http://localhost:8080/products" id={"newForm"} formMethod="POST" />
       <div className="products__list_item_admin">
         {props.products.map(quality => {
           return (
@@ -100,9 +83,7 @@ const ProductManager = (props) => {
               productType={props.productType}
               deleteProduct={deleteSingleProductHandler}
               showFormModal={showFormModal}
-
             />
-
           );
         })}
 
