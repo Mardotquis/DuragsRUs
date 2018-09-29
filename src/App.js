@@ -6,7 +6,7 @@ import Products from "./components/Products/Products";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import ProductManager from "./components/ProductManager/ProductManager";
+import ProductManager from "./components/ProductManager/Product/ProductManager";
 import Form from './components/ProductManager/Form/Form'
 import ContactAdmin from "./components/ProductManager/ContactAdmin/ContactAdmin";
 import Error from "./components/Error/Error";
@@ -21,7 +21,7 @@ class App extends Component {
     this.state = {
       ProductsJSON: [],
       filteredProducts: [],
-      loading: true
+      loading: true,
     };
   }
   componentDidMount() {
@@ -96,13 +96,9 @@ class App extends Component {
 
             <Route exact path='/callback' component={Callback} />
 
-            {/* <SecuredRoute path="/admin" render={() => (
-              <ProductManager products={this.state.ProductsJSON} />
-            )} /> */}
+
             <SecuredRoute path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
-            {/* <Route path="/admin/contact" render={() => (
-              <ContactAdmin products={this.state.ProductsJSON} />
-            )} /> */}
+
             <Route component={Error} />
           </Switch>
           {/* <Form formAction="http://localhost:8080/products" id={"newForm"} /> */}

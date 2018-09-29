@@ -62,7 +62,7 @@ const Product = (props) => {
         img={props.imgSrc}
         productType={props.productType}
         formAction={`http://localhost:8080/products/${props.productId}`}
-        formMethod={"POST"}
+        formMethod={"PUT"}
         productId={props.productId}
       />
     </section>
