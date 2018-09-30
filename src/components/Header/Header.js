@@ -36,8 +36,12 @@ const Header = () => {
         </li> */}
         {auth0Client.isAuthenticated() ? (
           <li>
-            <NavLink to="/admin" className="accountToggle"> </NavLink>
+            <li>
+              <NavLink to="/admin" className="accountToggle"> </NavLink>
+            </li>
+            <li><NavLink to="/admin/contact-info" >contact admin</NavLink></li>
           </li>
+
         ) : null}
 
         {/* AUTH0 */}

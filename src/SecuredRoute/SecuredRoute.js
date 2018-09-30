@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import auth0Client from '../Auth/Auth';
+import ContactAdmin from '../components/ProductManager/ContactAdmin/ContactAdmin';
 
 function SecuredRoute(props) {
     const { component: ProductManager, path } = props;
@@ -10,7 +11,9 @@ function SecuredRoute(props) {
                 auth0Client.signIn();
                 return <div></div>;
             }
-            return <ProductManager products={props.products} />
+            return (<div><ProductManager products={props.products} />
+                <ContactAdmin /></div>
+            )
         }} />
     );
 }

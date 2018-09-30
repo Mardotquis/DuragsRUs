@@ -1,5 +1,5 @@
 import React from "react";
-import ProductManagerHeader from "../ProductManagerHeader";
+// import ProductManagerHeader from "../ProductManagerHeader";
 import Product from "./Product";
 import Form from "../Form/Form";
 const ProductManager = (props) => {
@@ -64,7 +64,8 @@ const ProductManager = (props) => {
 
     <main className="products_manager_admin">
       <div className="products__header_admin">
-        <ProductManagerHeader />
+        <h1 className="product_manager__title_admin">product admin</h1>
+        {/* <ProductManagerHeader /> */}
         <div className="product__manager_controls_admin">
           <button className="add__product-btn" onClick={() => showFormModal("newForm")}>add a product</button>
 

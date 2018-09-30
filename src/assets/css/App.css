@@ -1315,4 +1315,113 @@ button[disabled] {
   background-color: #fff;
   color: #000;
 }
+
+.contact__admin {
+  position: relative;
+  margin-top: 16vh;
+  font-family: "VT323", monospace;
+}
+
+.contact_header__admin {
+  margin-left: 16px;
+  border-bottom: 3px solid #000;
+  display: inline;
+  font-size: 4em;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+  font-family: "VT323", monospace;
+}
+
+.contact_cards__admin {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact_card__admin {
+  padding: 1.5em 0;
+  width: 86%;
+  border-radius: 20px;
+  margin: 2em 0;
+  -webkit-box-shadow: 0 7px 4px #777;
+          box-shadow: 0 7px 4px #777;
+  border-bottom: 5px solid #2D2D2D;
+  border-top: 5px solid #2D2D2D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.submitted__time {
+  position: absolute;
+  top: -30px;
+  text-transform: uppercase;
+}
+
+.customer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2em;
+}
+
+.customer__info a {
+  color: #68ccfd;
+  text-decoration: none;
+}
+
+.customer__info a:hover {
+  color: #8b9ca4;
+}
+
+.customer__email, .customer__phn {
+  font-size: 2em;
+  font-style: italic;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0;
+  width: 50%;
+  padding: .25em 0;
+}
+
+.customer__email {
+  text-transform: uppercase;
+}
+
+.customer__name {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: bold;
+  justify-self: baseline;
+  margin-bottom: .5em;
+  padding-bottom: 7px;
+  border-bottom: 5px solid #2D2D2D;
+}
+
+.customer__message {
+  padding: 0 .5em;
+  font-size: 2em;
+  width: 60%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
 /*# sourceMappingURL=App.css.map */

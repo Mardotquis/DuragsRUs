@@ -7,7 +7,6 @@ import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductManager from "./components/ProductManager/Product/ProductManager";
-import Form from './components/ProductManager/Form/Form'
 import ContactAdmin from "./components/ProductManager/ContactAdmin/ContactAdmin";
 import Error from "./components/Error/Error";
 import "./assets/css/App.css";
@@ -97,11 +96,11 @@ class App extends Component {
             <Route exact path='/callback' component={Callback} />
 
 
-            <SecuredRoute path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
-
+            <SecuredRoute exact path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
+            <SecuredRoute path="/admin/contact-info" component={ContactAdmin} />
             <Route component={Error} />
           </Switch>
-          {/* <Form formAction="http://localhost:8080/products" id={"newForm"} /> */}
+
           <Footer />
         </div>
       </BrowserRouter>
