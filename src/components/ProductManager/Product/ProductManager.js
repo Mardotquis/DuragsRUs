@@ -64,7 +64,7 @@ const ProductManager = (props) => {
 
     <main className="products_manager_admin">
       <div className="products__header_admin">
-        <ProductManagerHeader />
+        {/* <ProductManagerHeader /> */}
         <div className="product__manager_controls_admin">
           <button className="add__product-btn" onClick={() => showFormModal("newForm")}>add a product</button>
 

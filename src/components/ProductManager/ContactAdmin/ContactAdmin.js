@@ -1,7 +1,8 @@
 import React from 'react';
 
 const ContactAdmin = (props) => {
-    <h1>contact</h1>
+    return (
+        <h1>contact</h1>)
 
 };
 
