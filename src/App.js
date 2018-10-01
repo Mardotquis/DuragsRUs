@@ -20,18 +20,19 @@ class App extends Component {
     this.state = {
       ProductsJSON: [],
       filteredProducts: [],
+      contactsData: [],
       loading: true,
     };
   }
-  componentDidMount() {
-    const url = 'http://localhost:8080/products';
-    fetch(url)
+  async componentDidMount() {
+    const productsFetchUrl = 'http://localhost:8080/products';
+    await fetch(productsFetchUrl)
       .then((resp) => resp.json())
       .then((data) => {
         this.setState({
           ProductsJSON: data,
           loading: false
-        }, () => console.log(this.state.ProductsJSON)
+        }
         )
       })
       .catch((error) => {
@@ -39,7 +40,19 @@ class App extends Component {
         const errorHTML = "<h2>Sorry, an error has occured with fetching products...";
         document.querySelector('.errorHandler').innerHTML = errorHTML;
         this.setState({ loading: false });
+      });
+    const contactFetchUrl = "http://localhost:8080/contact/data";
+    await fetch(contactFetchUrl)
+      .then((resp) => resp.json())
+      .then((data) => {
+        this.setState({
+          contactsData: data,
+        }
+        )
       })
+      .catch(e => console.log(e));
+
+
   };
   filterProducts = () => {
     let typeValue = document.querySelector(".typeSelection").value;
@@ -97,7 +110,8 @@ class App extends Component {
 
 
             <SecuredRoute exact path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
-            <SecuredRoute path="/admin/contact-info" component={ContactAdmin} />
+
+            <SecuredRoute path="/admin/contact-info" component={ContactAdmin} contactsData={this.state.contactsData} />
             <Route component={Error} />
           </Switch>
 

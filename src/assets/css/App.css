@@ -1397,8 +1397,8 @@ button[disabled] {
       -ms-grid-row-align: center;
       align-self: center;
   padding: 0;
-  width: 50%;
   padding: .25em 0;
+  text-align: center;
 }
 
 .customer__email {

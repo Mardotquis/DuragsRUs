@@ -40,7 +40,7 @@ const Product = (props) => {
         <p className="product_id_admin">{props.productId}</p>
       </div>
       <div className="product__middle">
-        <img src={props.imgSrc} className="product__img_admin" />
+        <img src={props.imgSrc} className="product__img_admin" alt={props.description} />
         <p className="product__description_admin">{props.description}</p>
 
         <p className="product__price_admin">${props.price}</p>

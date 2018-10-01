@@ -1,15 +1,16 @@
 import React from 'react';
 
 const ContactCardAdmin = (props) => {
+    const { customerName, customerEmail, customerPhoneNum, customerMessage, createdDate } = props
     return (
         <div className="contact_card__admin">
-            <time className="submitted__time">submitted at: </time>
+            <time className="submitted__time">submitted at:{createdDate.toString()} </time>
             <div className="customer__info">
-                <h2 className="customer__name">Customer's Name</h2>
-                <a href="mailto: abc@example.com" className="customer__email">example.com</a>
-                <a href="tel:7049999999" className="customer__phn">89322832829</a>
+                <h2 className="customer__name">{customerName}</h2>
+                <a href={`mailto: ${customerEmail}`} className="customer__email">{customerEmail}</a>
+                <a href={`tel: ${customerPhoneNum}`} className="customer__phn">{customerPhoneNum}</a>
             </div>
-            <p className="customer__message">Sint voluptate fugiat amet cillum id ad consequat sint exercitation proident est occaecat laboris. Reprehenderit laborum ipsum ipsum in.</p>
+            <p className="customer__message">"{customerMessage}"</p>
 
         </div>
     )
