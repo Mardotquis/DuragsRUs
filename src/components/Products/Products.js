@@ -18,7 +18,7 @@ const Products = (props) => {
           </select>
         </form>
 
-        <form className="products__form" onChange={props.products}>
+        <form className="products__form" onChange={props.productsFilter}>
           <select name="price" className="priceSelection">
             <option>Price</option>
             <option value="asc">Low to High</option>
