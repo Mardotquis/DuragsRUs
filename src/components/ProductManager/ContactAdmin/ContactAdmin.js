@@ -2,7 +2,7 @@ import React from 'react';
 import ContactCardAdmin from './ContactCardAdmin';
 
 const ContactAdmin = (props) => {
-    { console.log('I HAVE REACED CARDS' + props.contactsData) }
+
     return (
         <main className="contact__admin">
             <h1 className="contact_header__admin">Contact Admin</h1>

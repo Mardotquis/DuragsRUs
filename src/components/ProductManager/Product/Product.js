@@ -19,7 +19,6 @@ const Product = (props) => {
   };
 
   const editProductInformation = (e) => {
-
     e.preventDefault();
     const formId = Array.from(e.target.parentNode.parentNode.children).pop().id
     props.showFormModal(formId);

@@ -37,7 +37,7 @@ class HeroImg extends Component {
 
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data)
+
       })
 
   }
