@@ -43,10 +43,8 @@
     margin-top: 50%;
   }
 } //GOAT ICON FOR NAV BAR
-
-.accountToggle{
-   background-image: url('../img/account.svg');
-   background-size: cover;
+.accountToggle, .contactToggle{
+  background-size: cover;
    background-repeat: no-repeat;
    width: 50px;
    height: 50px;
@@ -54,7 +52,14 @@
    @media (max-width: $iphonemedia) {
     width: 25px;
     height: 25px;
-  }
+}
+
+}
+.accountToggle{
+  background-image: url('../img/account.svg');
+ }
+.contactToggle{
+background-image: url('../img/phone-book.svg');
 }
 .header__extralinks {
   display: flex;

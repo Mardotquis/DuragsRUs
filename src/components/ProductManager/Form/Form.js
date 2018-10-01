@@ -3,11 +3,11 @@ class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: '',
-            description: '',
-            productImages: '',
-            price: '',
-            productType: ''
+            // title: '',
+            // description: '',
+            // productImages: '',
+            // price: '',
+            // productType: ''
         }
     };
     handleFormInput = (event) => {
