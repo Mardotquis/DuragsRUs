@@ -1,10 +1,10 @@
 .products_manager_admin {
   position: relative;
-  margin-top: 16vh;
+  margin-top: 17vh;
   // background-color: $dark-grey;
   // color: #fff;
   font-family: $vt-font;
-  button {
+  .button {
     font-family: $vt-font;
     outline: none;
     // color: #fff;
@@ -25,19 +25,10 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  width: 100%;
+  width: 50%;
   padding: 20px 0;
 }
-.product_manager__title_admin {
-  // font-size: 4em;
-  margin-left: 16px;
-  border-bottom: 3px solid #000;
-  display: inline;
-  font-size: 4em;
-  padding-bottom: 7px;
-  text-transform: uppercase;
-  font-family: $vt-font;
-}
+
 .product__manager_controls_admin {
   margin-right: 30px;
   button {
@@ -47,11 +38,19 @@
     margin: 0 10px;
   }
   .add__product-btn {
-    background-color: $blue;
+    background-image: url('../img/additem.svg');
+    background-size: cover;
+    margin-left: 90%;
+    // margin-right: auto;
+    width: 70px;
+    height: 70px;
+    // background-color: $blue;
+    &:hover{
+      background-color: $dark-grey;
+    }
     &:focus,
     &:active {
-      background-color: #f0f0f0;
-      color: $blue;
+      background-color: black;
     }
   }
 
@@ -156,7 +155,7 @@ left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
 background-color: #fff;
-  height: 520px;
+
   width: 70%;
 // background-color: rgba($color: #000000, $alpha:.51);
 // background-color: rgba($color: #000000, $alpha: 1);
@@ -182,6 +181,12 @@ outline: 2px solid $dark-grey;
   textarea{
     height: 120px !important;
     resize: none;
+  }
+  label{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    margin: 3px;
   }
   .submitButton {
     width: 35%;
@@ -242,3 +247,26 @@ color: #000;
 }
 };
 
+
+.admin__header_links {
+  padding: 20px 0;
+  // font-size: 4em;
+  margin-left: 16px;
+  border-bottom: 2px solid #000;
+  display: inline;
+  font-size: 3em;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+  font-family: $vt-font;
+  text-decoration: none;
+  display: inline-block;
+
+
+  a{
+    color: black;
+  }
+&:hover{
+  color: $babyblue;
+
+}
+}
