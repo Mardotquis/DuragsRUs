@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Index from "./components/Index/Index";
 import Products from "./components/Products/Products";
@@ -8,6 +7,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductManager from "./components/ProductManager/Product/ProductManager";
 import ContactAdmin from "./components/ProductManager/ContactAdmin/ContactAdmin";
+import Admin from "./components/ProductManager/Admin";
 import Error from "./components/Error/Error";
 import "./assets/css/App.css";
 import Callback from "./Callback";
