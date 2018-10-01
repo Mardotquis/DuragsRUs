@@ -42,6 +42,8 @@ const Header = () => {
             <li><NavLink to="/admin/contact-info" className="contactToggle"></NavLink></li>
           </div>
 
+
+
         ) : null}
 
         {/* AUTH0 */}
