@@ -111,7 +111,7 @@ class App extends Component {
 
             <SecuredRoute exact path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
 
-            <SecuredRoute path="/admin/contact-info" component={ContactAdmin} contactsData={this.state.contactsData} />
+            <SecuredRoute exact path="/admin/contact-info" component={ContactAdmin} contactsData={this.state.contactsData} />
             <Route component={Error} />
           </Switch>
 

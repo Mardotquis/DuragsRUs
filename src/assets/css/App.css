@@ -133,6 +133,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  color: black;
+}
+
 h1 {
   font-family: "Kosugi", sans-serif;
   font-size: 3em;
@@ -1008,11 +1012,11 @@ button:hover, button:active {
 
 .products_manager_admin {
   position: relative;
-  margin-top: 16vh;
+  margin-top: 17vh;
   font-family: "VT323", monospace;
 }
 
-.products_manager_admin button {
+.products_manager_admin .button {
   font-family: "VT323", monospace;
   outline: none;
   border: none;
@@ -1020,7 +1024,7 @@ button:hover, button:active {
   text-transform: uppercase;
 }
 
-.products_manager_admin button:hover {
+.products_manager_admin .button:hover {
   opacity: 0.7;
 }
 
@@ -1049,18 +1053,8 @@ button:hover, button:active {
           justify-content: space-between;
   position: -webkit-sticky;
   position: sticky;
-  width: 100%;
+  width: 50%;
   padding: 20px 0;
-}
-
-.products_manager_admin .product_manager__title_admin {
-  margin-left: 16px;
-  border-bottom: 3px solid #000;
-  display: inline;
-  font-size: 4em;
-  padding-bottom: 7px;
-  text-transform: uppercase;
-  font-family: "VT323", monospace;
 }
 
 .products_manager_admin .product__manager_controls_admin {
@@ -1073,12 +1067,19 @@ button:hover, button:active {
 }
 
 .products_manager_admin .product__manager_controls_admin .add__product-btn {
-  background-color: #235789;
+  background-image: url("../img/additem.svg");
+  background-size: cover;
+  margin-left: 90%;
+  width: 70px;
+  height: 70px;
+}
+
+.products_manager_admin .product__manager_controls_admin .add__product-btn:hover {
+  background-color: #2D2D2D;
 }
 
 .products_manager_admin .product__manager_controls_admin .add__product-btn:focus, .products_manager_admin .product__manager_controls_admin .add__product-btn:active {
-  background-color: #f0f0f0;
-  color: #235789;
+  background-color: black;
 }
 
 .products_manager_admin .product__card_admin {
@@ -1200,7 +1201,6 @@ button:hover, button:active {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #fff;
-  height: 520px;
   width: 70%;
   display: none;
   -webkit-box-orient: vertical;
@@ -1249,6 +1249,13 @@ button:hover, button:active {
 .productForm textarea, .newProduct textarea, .editProduct textarea, #newForm textarea {
   height: 120px !important;
   resize: none;
+}
+
+.productForm label, .newProduct label, .editProduct label, #newForm label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin: 3px;
 }
 
 .productForm .submitButton, .newProduct .submitButton, .editProduct .submitButton, #newForm .submitButton {
@@ -1316,6 +1323,27 @@ button[disabled] {
   color: #000;
 }
 
+.admin__header_links {
+  padding: 20px 0;
+  margin-left: 16px;
+  border-bottom: 2px solid #000;
+  display: inline;
+  font-size: 3em;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+  font-family: "VT323", monospace;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.admin__header_links a {
+  color: black;
+}
+
+.admin__header_links:hover {
+  color: #68ccfd;
+}
+
 .contact__admin {
   position: relative;
   margin-top: 16vh;
@@ -1344,11 +1372,13 @@ button[disabled] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact_card__admin {
   padding: 1.5em 0;
-  width: 86%;
+  width: 46%;
   border-radius: 20px;
   margin: 2em 0;
   -webkit-box-shadow: 0 7px 4px #777;

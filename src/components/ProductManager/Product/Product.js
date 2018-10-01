@@ -46,7 +46,7 @@ const Product = (props) => {
       </div>
       <div className="product__controls_admin">
         <button className="product__edit_button" onClick={editProductInformation}>edit</button>
-        <button className="product__delete_button" onClick={toggleDelete} > delete</button>
+        <button className="product__delete_button" onClick={toggleDelete}>delete</button>
       </div>
       <div className="confirmationMessage" id={props.productId} >
         <p>Are you sure you would like to delete this product?</p>
