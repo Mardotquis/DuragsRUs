@@ -235,6 +235,7 @@ h1 {
 
 .contactToggle {
   background-image: url("../img/phone-book.svg");
+  margin-top: 5px;
 }
 
 .header__extralinks {
@@ -724,7 +725,7 @@ button:hover, button:active {
   }
 }
 
-.contact {
+.contactpage {
   margin-top: 16vh;
   position: relative;
   font-family: "Kosugi", sans-serif;
@@ -736,17 +737,17 @@ button:hover, button:active {
           align-items: center;
 }
 
-.contact a {
+.contactpage a {
   color: black;
   text-decoration: none;
 }
 
-.contact a:hover {
+.contactpage a:hover {
   color: #68ccfd;
 }
 
 @media (max-width: 1085px) {
-  .contact {
+  .contactpage {
     display: block;
   }
 }
@@ -827,6 +828,8 @@ button:hover, button:active {
   border: none;
   border-bottom: 2px solid #eee;
   font-size: 2em;
+  resize: none;
+  text-align: center;
 }
 
 @media (max-width: 1085px) {
@@ -836,6 +839,11 @@ button:hover, button:active {
     margin: 0 auto;
     text-align: center;
   }
+}
+
+.contact__form textarea {
+  height: 120px;
+  text-align: left;
 }
 
 .contact__form #submitButton {
@@ -1017,6 +1025,35 @@ button:hover, button:active {
   }
 }
 
+.header__auth {
+  font-size: 1em;
+  border-bottom: none;
+  width: 100%;
+  padding: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+.header__auth:hover {
+  cursor: pointer;
+}
+
+.auth0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 1em;
+}
+
+.contactToggle {
+  margin-top: .5em !important;
+}
+
 .products_manager_admin {
   position: relative;
   margin-top: 17vh;
@@ -1049,18 +1086,7 @@ button:hover, button:active {
 }
 
 .products_manager_admin .products__header_admin {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: -webkit-sticky;
-  position: sticky;
-  width: 50%;
+  width: 24%;
   padding: 20px 0;
 }
 
@@ -1350,6 +1376,10 @@ button[disabled] {
   color: #68ccfd;
 }
 
+.contact {
+  width: 20%;
+}
+
 .admin__header {
   margin-left: 30px;
 }
@@ -1358,7 +1388,6 @@ button[disabled] {
   position: relative;
   margin-top: 17vh;
   font-family: "VT323", monospace;
-  text-align: center;
 }
 
 .contact_header__admin {
@@ -1387,11 +1416,14 @@ button[disabled] {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  text-align: center;
+  height: 100%;
 }
 
 .contact_card__admin {
-  padding: 1.5em 0;
-  width: 40%;
+  width: 43%;
+  max-width: 750px;
+  height: 320px;
   border-radius: 20px;
   margin: 2em 0;
   -webkit-box-shadow: 0 7px 4px #777;
@@ -1401,16 +1433,20 @@ button[disabled] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  height: 230px;
 }
 
 .submitted__time {
   position: absolute;
   top: -30px;
+  right: 10px;
   text-transform: uppercase;
 }
 
@@ -1422,7 +1458,9 @@ button[disabled] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 2em;
+  width: 75%;
+  border-left: 5px solid #2D2D2D;
+  padding: 40px;
 }
 
 .customer__info a {
@@ -1451,7 +1489,7 @@ button[disabled] {
 
 .customer__name {
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: bold;
   justify-self: baseline;
   margin-bottom: .5em;
@@ -1460,12 +1498,12 @@ button[disabled] {
 }
 
 .customer__message {
-  padding: 0 .5em;
   font-size: 2em;
   width: 60%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
+  padding: 40px;
 }
 /*# sourceMappingURL=App.css.map */

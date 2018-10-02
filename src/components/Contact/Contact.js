@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contactpage">
       <div className="contact__left_col">
         <h1 className="contact__pri_header">Contact Us</h1>
         <h2 className="contact__sec_header">Ask Us Anything</h2>
@@ -26,7 +26,7 @@ const Contact = () => {
         <input id="cusEmail" type="email" name="customerEmail" />
 
         <label htmlFor="cusPhone">Phone Number:</label>
-        <input id="cusPhone" type="Number" name="customerPhoneNum" />
+        <input id="cusPhone" type="tel" name="customerPhoneNum" />
 
         <label htmlFor="cusMessage">Message:</label>
         <textarea id="cusMessage" type="text" name="customerMessage" />

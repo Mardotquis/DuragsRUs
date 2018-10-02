@@ -2,6 +2,8 @@
 
 @import "../scss/variables";
 
+@import "../scssAdmin/variables";
+
 @import "../scss/body";
 
 @import "../scss/header";
@@ -14,9 +16,11 @@
 
 @import "../scss/footer";
 
+@import "../scss/_extrastyles";
+
 //ADMIN STYLES
 
-@import "../scssAdmin/variables";
+
 
 @import "../scssAdmin/mixins";
 

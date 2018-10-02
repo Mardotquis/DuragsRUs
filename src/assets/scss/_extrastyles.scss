@@ -1,0 +1,28 @@
+.header__auth{
+    // font-size: ;
+    font-size: 1em;
+    border-bottom: none;
+    // border: 2px solid $babyblue;
+    // height: 100%;
+    width: 100%;
+    padding: 0;
+    order: -1;
+    align-self: center;
+    text-align: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.auth0{
+    display: flex;
+    padding-right: 1em;
+    // flex-direction: column;
+
+  }
+  .contactToggle{
+       margin-top: .5em !important;
+
+
+  }

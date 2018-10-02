@@ -56,10 +56,13 @@
 
 }
 .accountToggle{
+
   background-image: url('../img/account.svg');
  }
 .contactToggle{
 background-image: url('../img/phone-book.svg');
+margin-top: 5px;
+
 }
 .header__extralinks {
   display: flex;

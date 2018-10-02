@@ -1,15 +1,21 @@
+.contact{
+    // display: inline;
+  width: 20%;
+
+}
+
 .admin__header{
     margin-left: 30px;
-
+}
+.contact_admin_header{
+    // text-align: left !important;
 }
 
 .contact__admin{
     position: relative;
     margin-top: 17vh;
-    // background-color: $dark-grey;
-    // color: #fff;
+
     font-family: $vt-font;
-    text-align: center;
 }
 .contact_header__admin{
     margin-left: 16px;
@@ -19,7 +25,7 @@
   padding-bottom: 7px;
   text-transform: uppercase;
   font-family: $vt-font;
-//   padding: 20px 0;
+
 
 }
 .contact_cards__admin{
@@ -29,35 +35,46 @@
     align-items: center;
     flex-wrap: wrap;
 justify-content: space-around;
-// align-content: space-around;
+text-align: center;
+height: 100%;
+
+
+
+
 }
 
 .contact_card__admin{
-    padding: 1.5em 0;
-    width: 40%;
-    // height: 230px;
-    // background-color: red;
+
+    width: 43%;
+    max-width: 750px;
+    height: 320px;
     border-radius: 20px;
     margin: 2em 0;
     box-shadow: 0 7px 4px #777;
     border-bottom: 5px solid $dark-grey;
     border-top: 5px solid $dark-grey;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     position: relative;
-    height: 230px;
-// align-items: center;
+    // height: 100%;
+    // max-height: 300px;
+
 }
 .submitted__time{
 position: absolute;
 top: -30px;
+right: 10px;
 text-transform: uppercase;
+
 }
 .customer__info{
     display: flex;
     flex-direction: column;
-    margin-left: 2em;
+    width: 75%;
+    border-left: 5px solid $dark-grey;
 
+padding: 40px;
 
    a{
        color: $babyblue;
@@ -84,7 +101,7 @@ text-transform: uppercase;
 }
 .customer__name{
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     justify-self: baseline;
     margin-bottom: .5em;
@@ -92,10 +109,12 @@ text-transform: uppercase;
     border-bottom: 5px solid $dark-grey;
 }
 .customer__message{
-    padding: 0 .5em;
+    // padding: 0 .5em;
     font-size: 2em;
     width: 60%;
     align-self: center;
     text-align: center;
+    padding: 40px;
+
 
 }

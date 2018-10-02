@@ -63,7 +63,7 @@ const ProductManager = (props) => {
   return (
 
     <main className="products_manager_admin">
-      {/* <ProductManagerHeader /> */}
+
       <h1 className="admin__header">Product Admin</h1>
 
       <div className="product__manager_controls_admin">

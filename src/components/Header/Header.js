@@ -34,26 +34,28 @@ const Header = () => {
             <div className="accountToggle"></div>
           </NavLink>
         </li> */}
-        {auth0Client.isAuthenticated() ? (
-          <div>
-            <li>
-              <NavLink to="/admin" className="accountToggle"> </NavLink>
-            </li>
-            <li><NavLink to="/admin/contact-info" className="contactToggle"></NavLink></li>
-          </div>
+
+        <div className="auth0">
+          {auth0Client.isAuthenticated() ? (
+            <div>
+              <li>
+                <NavLink to="/admin" className="accountToggle"> </NavLink>
+              </li>
+              <li><NavLink to="/admin/contact-info" className="contactToggle"></NavLink></li>
+            </div>
 
 
 
-        ) : null}
+          ) : null}
 
-        {/* AUTH0 */}
-        {!auth0Client.isAuthenticated() && (
-          <button className="header__auth" onClick={auth0Client.signIn} >Log In</button>
-        )}
-        {auth0Client.isAuthenticated() && (
-          <button className="header__auth" onClick={auth0Client.signOut} >Log Out</button>
-        )}
-
+          {/* AUTH0 */}
+          {!auth0Client.isAuthenticated() && (
+            <li className="header__auth" onClick={auth0Client.signIn} >Log In</li>
+          )}
+          {auth0Client.isAuthenticated() && (
+            <li className="header__auth" onClick={auth0Client.signOut} >Log Out</li>
+          )}
+        </div>
       </ul>
     </nav >
   );

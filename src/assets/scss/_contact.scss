@@ -1,4 +1,4 @@
-.contact {
+.contactpage {
   margin-top: 16vh;
   position: relative;
   font-family: $headingfont;
@@ -53,6 +53,8 @@
   label {
     font-size: 1.25em;
     margin-bottom: 10px;
+
+
     @media (max-width: $ipadmedia) {
       margin-left: 16px;
     }
@@ -64,11 +66,17 @@
     border: none;
     border-bottom: 2px solid #eee;
     font-size: 2em;
+    resize: none;
+    text-align: center;
     @media (max-width: $ipadmedia) {
       width: 80%;
       margin: 0 auto;
       text-align: center;
     }
+  }
+  textarea{
+    height: 120px;
+    text-align: left;
   }
   #submitButton {
     margin: 15px 0;
