@@ -1081,10 +1081,6 @@ button:hover, button:active {
   height: 70px;
 }
 
-.products_manager_admin .product__manager_controls_admin .add__product-btn:hover {
-  background-color: #2D2D2D;
-}
-
 .products_manager_admin .product__manager_controls_admin .add__product-btn:focus, .products_manager_admin .product__manager_controls_admin .add__product-btn:active {
   background-color: black;
 }
@@ -1095,7 +1091,7 @@ button:hover, button:active {
   border-bottom: 5px solid #2D2D2D;
   border-top: 5px solid #2D2D2D;
   width: 86%;
-  height: 230px;
+  padding: 2em 0;
   border-radius: 20px;
   background-color: #fff;
   margin: 2em 0;
@@ -1126,11 +1122,12 @@ button:hover, button:active {
 }
 
 .products_manager_admin .product__title_admin {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: 3em;
+  font-size: 2em;
   width: 250px;
   text-transform: uppercase;
+  text-align: center;
+  margin: auto 0 auto 20px;
+  font-weight: bold;
 }
 
 .products_manager_admin .product__middle {
@@ -1140,7 +1137,7 @@ button:hover, button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 500px;
+  width: 50%;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -1150,18 +1147,19 @@ button:hover, button:active {
 
 .products_manager_admin .product__img_admin {
   height: 150px;
-  width: auto;
+  width: 150px;
 }
 
 .products_manager_admin .product__description_admin {
   width: 60%;
-  font-size: 1.75em;
+  font-size: 1.65em;
   text-align: center;
 }
 
 .products_manager_admin .product__price_admin {
-  font-size: 5em;
+  font-size: 3em;
   margin-right: 30px;
+  font-weight: bold;
 }
 
 .products_manager_admin .product__controls_admin {
@@ -1175,8 +1173,9 @@ button:hover, button:active {
   outline: none;
   border-radius: 20px;
   padding: 5px 0;
-  margin: 5px 0;
+  margin: .75em 0;
   text-transform: uppercase;
+  display: block;
 }
 
 .products_manager_admin .product__controls_admin .product__edit_button {
@@ -1351,10 +1350,15 @@ button[disabled] {
   color: #68ccfd;
 }
 
+.admin__header {
+  margin-left: 30px;
+}
+
 .contact__admin {
   position: relative;
-  margin-top: 16vh;
+  margin-top: 17vh;
   font-family: "VT323", monospace;
+  text-align: center;
 }
 
 .contact_header__admin {
@@ -1372,20 +1376,22 @@ button[disabled] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .contact_card__admin {
   padding: 1.5em 0;
-  width: 46%;
+  width: 40%;
   border-radius: 20px;
   margin: 2em 0;
   -webkit-box-shadow: 0 7px 4px #777;
@@ -1399,6 +1405,7 @@ button[disabled] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  height: 230px;
 }
 
 .submitted__time {

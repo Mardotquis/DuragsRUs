@@ -2,9 +2,10 @@ import React from 'react';
 
 const ContactCardAdmin = (props) => {
     const { customerName, customerEmail, customerPhoneNum, customerMessage, createdDate } = props
+    const theDate = new Date(createdDate)
     return (
         <div className="contact_card__admin">
-            <time className="submitted__time">submitted at:{createdDate.toString()} </time>
+            <time className="submitted__time">submitted at:{theDate.toLocaleString('en-us')} </time>
             <div className="customer__info">
                 <h2 className="customer__name">{customerName}</h2>
                 <a href={`mailto: ${customerEmail}`} className="customer__email">{customerEmail}</a>

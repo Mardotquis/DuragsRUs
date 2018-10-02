@@ -3,14 +3,7 @@ import Form from '../Form/Form';
 // import EditForm from "../Form/EditForm";
 
 const Product = (props) => {
-  // const toggleModal = () => {
-  //   let modal = document.querySelector(".confirmationMessage");
-  //   if (modal.style.display === "none" || modal.style.display === " ") {
-  //     modal.style.display = "block"
-  //   } else {
-  //     modal.style.display = "none"
-  //   }
-  // };
+
   const toggleDelete = () => {
     let confirmationMessage = document.getElementById(`${props.productId}`);
     let overlay = document.querySelector(".formOverlay");
@@ -34,10 +27,10 @@ const Product = (props) => {
 
   return (
     <section className="product__card_admin">
-      <div className="proudct__top_info_admin">
-        <h2 className="product__title_admin">{props.title}</h2>
-        <p className="product_id_admin">{props.productId}</p>
-      </div>
+
+      <h2 className="product__title_admin ">{props.title}</h2>
+      {/* <p className="product_id_admin">{props.productId}</p> */}
+
       <div className="product__middle">
         <img src={props.imgSrc} className="product__img_admin" alt={props.description} />
         <p className="product__description_admin">{props.description}</p>
@@ -63,6 +56,7 @@ const Product = (props) => {
         formAction={`http://localhost:8080/products/${props.productId}`}
         formMethod={"PUT"}
         productId={props.productId}
+        type={'edit'}
       />
     </section>
   );

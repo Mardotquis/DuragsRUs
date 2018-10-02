@@ -1,9 +1,15 @@
+.admin__header{
+    margin-left: 30px;
+
+}
+
 .contact__admin{
     position: relative;
-    margin-top: 16vh;
+    margin-top: 17vh;
     // background-color: $dark-grey;
     // color: #fff;
     font-family: $vt-font;
+    text-align: center;
 }
 .contact_header__admin{
     margin-left: 16px;
@@ -19,14 +25,16 @@
 .contact_cards__admin{
       padding-top: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-flex-wrap: wrap;
+    flex-wrap: wrap;
+justify-content: space-around;
+// align-content: space-around;
 }
 
 .contact_card__admin{
     padding: 1.5em 0;
-    width: 46%;
+    width: 40%;
     // height: 230px;
     // background-color: red;
     border-radius: 20px;
@@ -37,6 +45,7 @@ flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     position: relative;
+    height: 230px;
 // align-items: center;
 }
 .submitted__time{
