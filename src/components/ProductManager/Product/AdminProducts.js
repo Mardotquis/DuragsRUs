@@ -1,30 +1,23 @@
 import React from "react";
 import Form from '../Form/Form';
-// import EditForm from "../Form/EditForm";
 
 const Product = (props) => {
-
   const toggleDelete = () => {
     let confirmationMessage = document.getElementById(`${props.productId}`);
     let overlay = document.querySelector(".formOverlay");
     confirmationMessage.style.display = ("block");
     overlay.style.display = ("block");
   };
-
   const editProductInformation = (e) => {
     e.preventDefault();
     const formId = Array.from(e.target.parentNode.parentNode.children).pop().id
     props.showFormModal(formId);
-    // document.querySelector(".productForm").style.display = "flex";
   };
-
   const formatProductName = (productName) => {
     const randomNumber = Math.round(Math.random() * 100);
     const spaces = /\s/g;
     return `${productName.replace(spaces, "-").toLowerCase()}${randomNumber}`;
   }
-
-
   return (
     <section className="product__card_admin">
 
@@ -60,6 +53,4 @@ const Product = (props) => {
     </section>
   );
 }
-
-
 export default Product;

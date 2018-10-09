@@ -3,12 +3,9 @@ import React, { Component } from "react";
 import pinkRag from "../../assets/img/hero/hero1.jpg";
 import blackRag from "../../assets/img/hero/hero22.jpg";
 import goldRag from "../../assets/img/hero/hero3.jpg";
-
 let duragArray = [];
-
 let duragTime = 5000;
 let i = 0;
-
 duragArray[0] = `url(${pinkRag})`;
 duragArray[1] = `url(${blackRag})`;
 duragArray[2] = `url(${goldRag})`;
@@ -27,30 +24,13 @@ class HeroImg extends Component {
       setTimeout(this.heroSlider, duragTime);
     }
   };
-
-
   componentDidMount() {
     this.heroSlider();
-
-    const url = 'http://localhost:8080/products';
-    fetch(url)
-
-      .then((resp) => resp.json())
-      .then((data) => {
-
-      })
-
-  }
-
-
+  };
   render() {
-
     return (
       <div className="duragShuffle">
         <h1 className="imgCaption">Quality Durags</h1>
-        {/* <Link to="/products" className="durag__hero_btn">
-          shop durags
-        </Link> */}
       </div>
     );
   }

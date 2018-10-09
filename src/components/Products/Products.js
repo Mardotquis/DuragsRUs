@@ -1,10 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard/ProductCard";
-// import ProductsJSON from "../../assets/JSON/ProductsJSON";
-// import axios from "axios";
 
 const Products = (props) => {
-
   return (
     <div className="products">
       <h1 className="products__header_admin">Products</h1>
@@ -34,7 +31,6 @@ const Products = (props) => {
               title={list.title}
               imgSrc={list.productImages}
               price={list.price}
-              // handleQuanity={this.handleQuanity}
               description={list.description}
             />
           );

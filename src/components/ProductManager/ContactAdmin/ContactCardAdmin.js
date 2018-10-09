@@ -12,7 +12,6 @@ const ContactCardAdmin = (props) => {
                 <a href={`tel: ${customerPhoneNum}`} className="customer__phn">{customerPhoneNum}</a>
             </div>
             <p className="customer__message">"{customerMessage}"</p>
-
         </div>
     )
 

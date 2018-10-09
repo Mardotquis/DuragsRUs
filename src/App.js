@@ -7,7 +7,6 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductManager from "./components/ProductManager/Product/ProductManager";
 import ContactAdmin from "./components/ProductManager/ContactAdmin/ContactAdmin";
-import Admin from "./components/ProductManager/Admin";
 import Error from "./components/Error/Error";
 import "./assets/css/App.css";
 import Callback from "./Callback";
@@ -34,7 +33,7 @@ class App extends Component {
         }
         )
       })
-      .catch((error) => {
+      .catch(() => {
         console.warn('ERROR')
         this.setState({ loading: false });
       });
@@ -61,7 +60,6 @@ class App extends Component {
         type => type.productType === typeValue
       );
     }
-
     if (priceValue) {
       if (priceValue === "asc") {
         filterArr.sort((a, b) => {
@@ -73,7 +71,6 @@ class App extends Component {
         });
       }
     }
-
     this.setState({
       filteredProducts: filterArr
     });
@@ -83,31 +80,23 @@ class App extends Component {
       return null;
     }
     let newProducts = [];
-
     if (this.state.filteredProducts.length === 0) {
       newProducts = this.state.ProductsJSON;
     } else {
       newProducts = this.state.filteredProducts;
     }
-
     return (
       <BrowserRouter>
         <div>
           <Header />
           <Switch>
             <Route path="/" component={Index} exact />
-
             <Route path="/products" render={() => (
               <Products products={newProducts} productsFilter={this.filterProducts} />
             )} />
-
             <Route path="/contact" component={Contact} />
-
             <Route exact path='/callback' component={Callback} />
-
-
             <SecuredRoute exact path="/admin" component={ProductManager} products={this.state.ProductsJSON} />
-
             <SecuredRoute exact path="/admin/contact-info" component={ContactAdmin} contactsData={this.state.contactsData} />
             <Route component={Error} />
           </Switch>

@@ -7,13 +7,11 @@ const Footer = () => {
         <p>500 Main Street Charlotte, N.C. 28205</p>
         <Link to="/products">Products</Link>
         <a href="mailto:duragsrus@gmail.com">duragsrus@gmail.com</a>
-
         <a href="tel:7049999999">
           Tel:
           <span>(704) 999-9999</span>
         </a>
       </div>
-
       <ul className="footer__socialmedia">
         <li><a href="https://www.instagram.com">
           <i className="fab fa-instagram" />
@@ -28,7 +26,6 @@ const Footer = () => {
           <i className="fab fa-snapchat" />
         </a></li>
       </ul>
-
       <div className="footer__small">
         <small>2018 &copy; DuragsRUs</small>
         <ul className="footer__payment_options">

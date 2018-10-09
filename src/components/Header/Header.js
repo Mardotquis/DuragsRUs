@@ -10,9 +10,7 @@ const Header = () => {
       hiddenNav.style.display = "flex"
     } else {
       hiddenNav.style.display = "none"
-    }
-    // biggerMenu.style.display = "flex";
-    // menuIcon.style.display = "block";
+    };
   };
   return (
     <header >
@@ -36,12 +34,6 @@ const Header = () => {
             <NavLink to="/contact" activeClassName="activeLink">
               Contact </NavLink>
           </li>
-          {/* <li>
-          <NavLink to="/admin" >
-            <div className="accountToggle"></div>
-          </NavLink>
-        </li> */}
-
           <div className="auth0">
             {auth0Client.isAuthenticated() ? (
               <div>
@@ -50,11 +42,7 @@ const Header = () => {
                 </li>
                 <li><NavLink to="/admin/contact-info" className="contactToggle"></NavLink></li>
               </div>
-
-
-
             ) : null}
-
             {/* AUTH0 */}
             {!auth0Client.isAuthenticated() && (
               <li className="header__auth" onClick={auth0Client.signIn} >Log In</li>
@@ -79,7 +67,6 @@ const Header = () => {
               Contact
           </NavLink>
           </li>
-
           <div className="auth0">
             {auth0Client.isAuthenticated() ? (
               <div>
@@ -97,14 +84,10 @@ const Header = () => {
               <li className="header__auth hidden" onClick={auth0Client.signOut} >Log Out</li>
             )}
           </div>
-
         </ul>
-
-      </nav >
+      </nav>
       <div className="menu__icon" onClick={toggleMenuIcon} />
       <div className="header__overlay" />
-
-
     </header>
   );
 };

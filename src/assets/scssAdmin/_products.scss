@@ -140,6 +140,7 @@
   z-index: 20;
   left: 50%;
   top: 50%;
+
   transform: translate(-50%, -50%);
   background-color: #fff;
   width: 70%;
@@ -150,7 +151,7 @@
 
   input,
   textarea {
-    @include dimensions(90px, 70px);
+    @include dimensions(90px, 70%);
     border: none;
     border-bottom: 2px solid #eee;
     font-size: 2em;

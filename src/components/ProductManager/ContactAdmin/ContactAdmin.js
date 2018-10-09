@@ -1,12 +1,9 @@
 import React from 'react';
 import ContactCardAdmin from './ContactCardAdmin';
-import ProductManagerHeader from '../ProductManagerHeader';
 
 const ContactAdmin = (props) => {
-
     return (
         <main className="contact__admin">
-
             <h1 className="admin__header contact_admin_header">Contact Admin</h1>
             <section className="contact_cards__admin">
                 {props.contactsData.map(data => {
@@ -21,7 +18,6 @@ const ContactAdmin = (props) => {
                         />
                     );
                 })}
-
             </section>
         </main>
     )

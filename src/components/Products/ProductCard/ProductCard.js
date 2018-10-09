@@ -7,19 +7,18 @@ class ProductCard extends Component {
       quanity: 0
     };
   }
-  handleQuanity = action => {
-    if (action === "+") {
-      this.setState({
-        quanity: this.state.quanity + 1
-      });
-    } else if (action === "-" && this.state.quanity > 0) {
-      this.setState({
-        quanity: this.state.quanity - 1
-      });
-    }
-  };
-
   render() {
+    const handleQuanity = action => {
+      if (action === "+") {
+        this.setState({
+          quanity: this.state.quanity + 1
+        });
+      } else if (action === "-" && this.state.quanity > 0) {
+        this.setState({
+          quanity: this.state.quanity - 1
+        });
+      }
+    };
     return (
       <div className="product__card">
         <h2 className="product__card__title">{this.props.title}</h2>
@@ -33,8 +32,8 @@ class ProductCard extends Component {
         <p className="product__card_quanity">Qty: {this.state.quanity}</p>
         <div className="product__controls">
           <div className="product__btns">
-            <button className="product__btns" onClick={() => { this.handleQuanity("+"); }}> + </button>
-            <button className="product__btns" onClick={() => { this.handleQuanity("-"); }}> - </button>
+            <button className="product__btns" onClick={() => { handleQuanity("+"); }}> + </button>
+            <button className="product__btns" onClick={() => { handleQuanity("-"); }}> - </button>
           </div>
           <button className={this.state.quanity > 0 ? "product__card-addToCart-btn" : "product__card_cart-btn"} > Add to cart </button>
         </div>

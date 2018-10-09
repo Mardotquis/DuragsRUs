@@ -32,10 +32,7 @@ class Form extends Component {
 
     };
     render() {
-
-
         return (
-
             <form className="newProduct" id={this.props.id} onSubmit={this.sendData} >
 
                 <label htmlFor="productTitle" >product title</label>
