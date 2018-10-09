@@ -1154,8 +1154,8 @@ button:hover, button:active {
   background-image: url("../img/additem.svg");
   background-size: cover;
   margin-left: 90%;
-  width: 70px;
   height: 70px;
+  width: 70px;
 }
 
 .products_manager_admin .product__manager_controls_admin .add__product-btn:focus, .products_manager_admin .product__manager_controls_admin .add__product-btn:active {
@@ -1316,7 +1316,7 @@ button:hover, button:active {
 
 .productForm input, .productForm textarea, .newProduct input, .newProduct textarea, .editProduct input, .editProduct textarea, #newForm input, #newForm textarea {
   height: 90px;
-  width: 70%;
+  width: 70px;
   border: none;
   border-bottom: 2px solid #eee;
   font-size: 2em;
@@ -1472,9 +1472,9 @@ button[disabled] {
 }
 
 .contact_card__admin {
-  width: 43%;
   max-width: 750px;
   height: 320px;
+  width: 43%;
   border-radius: 20px;
   margin: 2em 0;
   -webkit-box-shadow: 0 7px 4px #777;
