@@ -4,19 +4,23 @@ import auth0Client from "../../Auth/Auth";
 
 const Header = () => {
   const toggleMenuIcon = () => {
-    const menuIcon = document.querySelector('.menu__icon');
-    const biggerMenu = document.querySelector('.header__hidden_links');
-    biggerMenu.style.display = "flex";
-  }
+    // const menuIcon = document.querySelector('.menu__icon');
+    const hiddenNav = document.querySelector('.hidden__nav');
+    if (hiddenNav.style.display === "none" || hiddenNav.style.display === "") {
+      hiddenNav.style.display = "flex"
+    } else {
+      hiddenNav.style.display = "none"
+    }
+    // biggerMenu.style.display = "flex";
+    // menuIcon.style.display = "block";
+  };
   return (
-    <header>
+    <header >
       <nav className="header">
         <NavLink
           to="/"
           className="header__name"
-          activeClassName="activeLink"
-          exact
-        >
+          activeClassName="activeLink" exact >
           DuragsRUs
       </NavLink>
         <NavLink to="/">
@@ -25,15 +29,12 @@ const Header = () => {
 
         <ul className="header__extralinks">
           <li>
-            <NavLink to="/products" activeClassName="activeLink">
-              Products
-          </NavLink>
+            <NavLink to="/products" activeClassName="activeLink"> Products </NavLink>
           </li>
 
           <li>
             <NavLink to="/contact" activeClassName="activeLink">
-              Contact
-          </NavLink>
+              Contact </NavLink>
           </li>
           {/* <li>
           <NavLink to="/admin" >
@@ -64,31 +65,28 @@ const Header = () => {
           </div>
 
         </ul>
+      </nav>
+      <nav className="hidden__nav">
         <ul className="header__hidden_links">
           <li>
-            <NavLink to="/products" activeClassName="activeLink">
+            <NavLink to="/products" activeClassName="activeLink" onClick={toggleMenuIcon}>
               Products
           </NavLink>
           </li>
 
           <li>
-            <NavLink to="/contact" activeClassName="activeLink">
+            <NavLink to="/contact" activeClassName="activeLink" onClick={toggleMenuIcon}>
               Contact
           </NavLink>
           </li>
-          {/* <li>
-          <NavLink to="/admin" >
-            <div className="accountToggle"></div>
-          </NavLink>
-        </li> */}
 
           <div className="auth0">
             {auth0Client.isAuthenticated() ? (
               <div>
                 <li>
-                  <NavLink to="/admin" className="accountToggle"> </NavLink>
+                  <NavLink to="/admin" className="accountToggle" onClick={toggleMenuIcon}> </NavLink>
                 </li>
-                <li><NavLink to="/admin/contact-info" className="contactToggle"></NavLink></li>
+                <li><NavLink to="/admin/contact-info" className="contactToggle" onClick={toggleMenuIcon}></NavLink></li>
               </div>
 
 
@@ -107,9 +105,10 @@ const Header = () => {
         </ul>
 
       </nav >
-      <div className="header__overlay">
-        <div className="menu__icon" onClick={toggleMenuIcon} />
-      </div>
+      <div className="menu__icon" onClick={toggleMenuIcon} />
+      <div className="header__overlay" />
+
+
     </header>
   );
 };

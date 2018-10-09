@@ -37,8 +37,6 @@ class App extends Component {
       })
       .catch((error) => {
         console.warn('ERROR')
-        const errorHTML = "<h2>Sorry, an error has occured with fetching products...";
-        document.querySelector('.errorHandler').innerHTML = errorHTML;
         this.setState({ loading: false });
       });
     const contactFetchUrl = "http://localhost:8080/contact/data";

@@ -33,32 +33,10 @@ class ProductCard extends Component {
         <p className="product__card_quanity">Qty: {this.state.quanity}</p>
         <div className="product__controls">
           <div className="product__btns">
-            <button
-              className="product__btns"
-              onClick={() => {
-                this.handleQuanity("+");
-              }}
-            >
-              +
-            </button>
-            <button
-              className="product__btns"
-              onClick={() => {
-                this.handleQuanity("-");
-              }}
-            >
-              -
-            </button>
+            <button className="product__btns" onClick={() => { this.handleQuanity("+"); }}> + </button>
+            <button className="product__btns" onClick={() => { this.handleQuanity("-"); }}> - </button>
           </div>
-          <button
-            className={
-              this.state.quanity > 0
-                ? "product__card-addToCart-btn"
-                : "product__card_cart-btn"
-            }
-          >
-            Add to cart
-          </button>
+          <button className={this.state.quanity > 0 ? "product__card-addToCart-btn" : "product__card_cart-btn"} > Add to cart </button>
         </div>
       </div>
     );

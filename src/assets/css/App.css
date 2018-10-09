@@ -255,7 +255,7 @@ h1 {
           align-items: center;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1065px) {
   .header__extralinks {
     display: none;
   }
@@ -284,47 +284,69 @@ h1 {
 .menu__icon {
   background-image: url("../img/menuicon.svg");
   display: none;
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   background-size: cover;
+  z-index: 5;
+  position: absolute;
+  right: 2em;
+  top: 2em;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1065px) {
   .menu__icon {
     display: block;
   }
 }
 
-.header__hidden_links {
+.hidden__nav {
+  height: 100vh;
+  width: 100vw;
+  background-color: #68ccfd;
+  position: fixed;
+  top: 0;
+  z-index: 5;
   display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  font-family: "Kosugi", sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  text-transform: uppercase;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
 }
 
-.header__overlay {
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  background-color: red;
-  z-index: 100;
-  position: fixed;
-  top: 0;
+.hidden__nav:focus {
+  color: white !important;
+}
+
+.header__hidden_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 300px;
+  font-family: "Kosugi", sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header__hidden_links a {
+  text-decoration: none;
 }
 
 .index {
   font-family: "Kosugi", sans-serif;
-  margin-top: 13vh;
 }
 
 .duragShuffle {

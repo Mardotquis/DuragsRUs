@@ -12,9 +12,8 @@ class Form extends Component {
     };
     handleFormInput = (event) => {
         this.setState({ [event.target.name]: event.target.value });
-
     }
-    sendData = (e) => {
+    sendData = () => {
         // e.preventDefault();
         const { title, description, productImages, price, productType } = this.state
         let bodyBeingSent = { title, description, productImages, price, productType };
