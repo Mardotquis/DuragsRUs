@@ -29,7 +29,6 @@ const Product = (props) => {
     <section className="product__card_admin">
 
       <h2 className="product__title_admin ">{props.title}</h2>
-      {/* <p className="product_id_admin">{props.productId}</p> */}
 
       <div className="product__middle">
         <img src={props.imgSrc} className="product__img_admin" alt={props.description} />
