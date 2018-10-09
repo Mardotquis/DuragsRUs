@@ -22,9 +22,9 @@ class App extends Component {
       loading: true,
     };
   }
-  async componentDidMount() {
+   componentDidMount() {
     const productsFetchUrl = 'http://localhost:8080/products';
-    await fetch(productsFetchUrl)
+     fetch(productsFetchUrl)
       .then((resp) => resp.json())
       .then((data) => {
         this.setState({
@@ -38,7 +38,7 @@ class App extends Component {
         this.setState({ loading: false });
       });
     const contactFetchUrl = "http://localhost:8080/contact/data";
-    await fetch(contactFetchUrl)
+     fetch(contactFetchUrl)
       .then((resp) => resp.json())
       .then((data) => {
         this.setState({
