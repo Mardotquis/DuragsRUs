@@ -1,7 +1,6 @@
 .footer {
   position: absolute;
   bottom: 0;
-
   height: 250px;
   background-color: black;
   color: #fff;
@@ -16,40 +15,38 @@
     text-decoration: none;
     &:hover {
       color: $babyblue;
-    }
-  }
+    };
+  };
   @media (max-width: $iphonemedia) {
     height: 400px;
-  }
-}
-
+  };
+};
 .footer__top_middle {
   display: flex;
   justify-content: space-between;
-
   p,
   a {
     padding: 0 15px;
     border-left: 1px solid #eee;
-  }
+  };
   p {
     &:nth-last-of-type(odd) {
       border-right: 1px solid #eee;
       @media (max-width: $ipadmedia) {
         font-size: 0.75em;
         border: none;
-      }
-    }
-  }
+      };
+    };
+  };
   @media (max-width: $iphonemedia) {
     flex-direction: column;
     p,
     a {
       padding-bottom: 6%;
       border: none;
-    }
-  }
-}
+    };
+  };
+};
 .footer__socialmedia {
   margin-top: 5%;
   display: inline-block;
@@ -58,14 +55,13 @@
     color: white;
     i {
       font-size: 2em;
-    }
-  }
+    };
+  };
   @media (max-width: $iphonemedia) {
     margin: 5% 0;
     display: flex;
-  }
-}
-
+  };
+};
 .footer__small {
   padding-top: 5%;
   position: absolute;
@@ -78,12 +74,12 @@
   @media (max-width: $ipadmedia) {
     display: inline;
     margin-bottom: 7%;
-  }
+  };
   @media (max-width: $iphonemedia) {
     display: inline;
     margin-bottom: 7%;
-  }
-}
+  };
+};
 .footer__payment_options {
   position: absolute;
   right: 2%;
@@ -92,8 +88,8 @@
     i {
       font-size: 2.5em;
       color: white;
-    }
-  }
+    };
+  };
   @media (max-width: $iphonemedia) {
     position: relative;
     display: flex;
@@ -102,6 +98,6 @@
     a,
     i {
       padding: 0 3px;
-    }
-  }
-}
+    };
+  };
+};

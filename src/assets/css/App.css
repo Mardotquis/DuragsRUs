@@ -288,9 +288,9 @@ h1 {
   height: 65px;
   background-size: cover;
   z-index: 5;
-  position: absolute;
+  position: fixed;
   right: 2em;
-  top: 2em;
+  top: 2.1em;
 }
 
 @media (max-width: 1065px) {
@@ -334,7 +334,7 @@ h1 {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 300px;
+  height: 400px;
   font-family: "Kosugi", sans-serif;
   font-size: 3.5em;
   font-weight: bold;
@@ -347,6 +347,7 @@ h1 {
 
 .index {
   font-family: "Kosugi", sans-serif;
+  margin-top: 3vh;
 }
 
 .duragShuffle {
@@ -1072,11 +1073,12 @@ button:hover, button:active {
 .header__auth {
   font-size: 1em;
   border-bottom: none;
-  width: 100%;
+  width: inherit;
   padding: 0;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+  width: 119px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1087,15 +1089,15 @@ button:hover, button:active {
   cursor: pointer;
 }
 
+.hidden {
+  width: inherit;
+}
+
 .auth0 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-right: 1em;
-}
-
-.contactToggle {
-  margin-top: .5em !important;
 }
 
 .products_manager_admin {

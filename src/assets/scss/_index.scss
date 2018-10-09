@@ -1,8 +1,7 @@
 .index {
   font-family: $headingfont;
-
-}
-
+  margin-top: 3vh;
+};
 .duragShuffle {
   position: relative;
   display: flex;
@@ -16,24 +15,22 @@
   height: 80vh;
   @media (max-width: $iphonemedia) {
     height: 50vh;
-  }
-}
+  };
+};
 .imgCaption {
   font-family: $headingfont;
   font-weight: bold;
-
   letter-spacing: 10px;
   color: #fff;
   font-size: 7em;
   display: block;
   text-transform: uppercase;
   text-shadow: #fff 1px 1px 5px;
-
   border: none !important;
   @media (max-width: $iphonemedia) {
     font-size: 4em;
-  }
-}
+  };
+};
 .durag__hero_btn {
   font-size: 5em;
   position: absolute;
@@ -44,11 +41,9 @@
   color: white;
   text-decoration: none;
   font-family: $headingfont;
-}
-
+};
 .homebody__hero {
   display: flex;
-
   .shorts__background,
   .durag__background {
     background-size: cover;
@@ -59,20 +54,19 @@
       width: 100%;
       height: 50vh;
       align-content: center;
-    }
-  }
+    };
+  };
   .shorts__background {
     background-image: url("../img/shortshero/shorthero1.jpg");
     order: -1;
-  }
+  };
   .durag__background {
     background-image: url("../img/hero/hero33.png");
-
     margin-top: 10vh;
     @media (max-width: $iphonemedia) {
       margin: 0;
-    }
-  }
+    };
+  };
   .hero__captions {
     width: 50%;
     align-self: center;
@@ -90,32 +84,31 @@
         text-align: center;
         margin: auto;
         display: block;
-      }
-    }
+      };
+    };
     @media (max-width: $iphonemedia) {
       margin: 10px auto;
-    }
-  }
+    };
+  };
   @media (max-width: $iphonemedia) {
     display: block;
-  }
-}
+  };
+};
 .shop__link {
   align-self: center;
   margin-top: 1em;
   padding: 0.5em;
   width: 20vw;
   background-color: $babyblue;
-
   font-size: 3em;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
   &:hover {
     background-color: $browngold;
-  }
+  };
   @media (max-width: $iphonemedia) {
     font-size: 1.5em;
     width: 100%;
-  }
-}
+  };
+};

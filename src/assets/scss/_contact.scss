@@ -7,18 +7,17 @@
     text-decoration: none;
     &:hover {
       color: $babyblue;
-    }
-  }
+    };
+  };
   display: flex;
   align-items: center;
   @media (max-width: $ipadmedia) {
     display: block;
-  }
-}
+  };
+};
 .contact__left_col {
   flex-grow: 1;
   margin-left: 1em;
-
   .contact__pri_header {
     font-size: 3em;
     font-weight: bold;
@@ -27,23 +26,22 @@
     @media (max-width: $ipadmedia) {
       position: relative;
       margin-bottom: 1em;
-    }
-  }
+    };
+  };
   .contact__sec_header {
     font-size: 2em;
     @media (max-width: $iphonemedia) {
       margin-bottom: 1em;
-    }
-  }
+    };
+  };
   p {
     margin: 2.5% 0;
     font-size: 1.25em;
     @media (max-width: $iphonemedia) {
       margin-bottom: 1em;
-    }
-  }
-}
-
+    };
+  };
+};
 .contact__form {
   flex-grow: 2;
   align-self: center;
@@ -53,12 +51,11 @@
   label {
     font-size: 1.25em;
     margin-bottom: 10px;
-
-
     @media (max-width: $ipadmedia) {
       margin-left: 16px;
-    }
-  }
+    };
+  };
+
   input,
   textarea {
     height: 75px;
@@ -72,12 +69,14 @@
       width: 80%;
       margin: 0 auto;
       text-align: center;
-    }
-  }
+    };
+  };
+
   textarea{
     height: 120px;
     text-align: left;
-  }
+  };
+
   #submitButton {
     margin: 15px 0;
     width: 50%;
@@ -91,6 +90,6 @@
       background-color: #fff;
       color: #000;
       cursor: pointer;
-    }
-  }
-}
+    };
+  };
+};

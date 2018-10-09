@@ -88,17 +88,13 @@ const Header = () => {
                 </li>
                 <li><NavLink to="/admin/contact-info" className="contactToggle" onClick={toggleMenuIcon}></NavLink></li>
               </div>
-
-
-
             ) : null}
-
             {/* AUTH0 */}
             {!auth0Client.isAuthenticated() && (
-              <li className="header__auth" onClick={auth0Client.signIn} >Log In</li>
+              <li className="header__auth hidden" onClick={auth0Client.signIn} >Log In</li>
             )}
             {auth0Client.isAuthenticated() && (
-              <li className="header__auth" onClick={auth0Client.signOut} >Log Out</li>
+              <li className="header__auth hidden" onClick={auth0Client.signOut} >Log Out</li>
             )}
           </div>
 
