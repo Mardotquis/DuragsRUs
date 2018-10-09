@@ -13,7 +13,6 @@ import "./assets/css/App.css";
 import Callback from "./Callback";
 import SecuredRoute from "./SecuredRoute/SecuredRoute";
 
-
 class App extends Component {
   constructor() {
     super();

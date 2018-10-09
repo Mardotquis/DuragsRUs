@@ -347,7 +347,7 @@ h1 {
 
 .index {
   font-family: "Kosugi", sans-serif;
-  margin-top: 3vh;
+  margin-top: 13vh;
 }
 
 .duragShuffle {
@@ -987,7 +987,9 @@ button:hover, button:active {
 
 .footer__socialmedia {
   margin-top: 5%;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer__socialmedia a {
@@ -1041,6 +1043,9 @@ button:hover, button:active {
 
 .footer__payment_options {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   right: 2%;
 }
 

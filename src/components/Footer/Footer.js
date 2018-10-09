@@ -14,43 +14,43 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="footer__socialmedia">
-        <a href="https://www.instagram.com">
+      <ul className="footer__socialmedia">
+        <li><a href="https://www.instagram.com">
           <i className="fab fa-instagram" />
-        </a>
-        <a href="https://www.twitter.com">
+        </a></li>
+        <li><a href="https://www.twitter.com">
           <i className="fab fa-twitter" />
-        </a>
-        <a href="https://www.facebook.com">
+        </a></li>
+        <li><a href="https://www.facebook.com">
           <i className="fab fa-facebook" />
-        </a>
-        <a href="https://www.snapchat.com">
+        </a></li>
+        <li><a href="https://www.snapchat.com">
           <i className="fab fa-snapchat" />
-        </a>
-      </div>
+        </a></li>
+      </ul>
 
       <div className="footer__small">
         <small>2018 &copy; DuragsRUs</small>
-        <div className="footer__payment_options">
-          <a>
+        <ul className="footer__payment_options">
+          <li><a>
             <i className="fab fa-cc-visa" />
-          </a>
-          <a>
+          </a></li>
+          <li><a>
             <i className="fab fa-cc-mastercard" />
-          </a>
-          <a>
+          </a></li>
+          <li><a>
             <i className="fab fa-cc-discover" />
-          </a>
-          <a>
+          </a></li>
+          <li><a>
             <i className="fab fa-cc-amex" />
-          </a>
-          <a>
+          </a></li>
+          <li><a>
             <i className="fab fa-cc-paypal" />
-          </a>
-          <a>
+          </a></li>
+          <li><a>
             <i className="fab fa-apple-pay" />
-          </a>
-        </div>
+          </a></li>
+        </ul>
       </div>
     </footer>
   );
