@@ -31,7 +31,9 @@ class App extends Component {
           ProductsJSON: data,
           loading: false
         }
+
         )
+
       })
       .catch(() => {
         console.warn('ERROR')

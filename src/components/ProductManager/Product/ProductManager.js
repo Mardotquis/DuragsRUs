@@ -46,10 +46,10 @@ const ProductManager = (props) => {
         {props.products.map(quality => {
           return (
             <AdminProducts
-              key={quality._id}
+              key={quality.productId}
               title={quality.title}
-              productId={quality._id}
-              imgSrc={quality.productImages}
+              productId={quality.productId}
+              productImages={quality.productImages}
               price={quality.price}
               description={quality.description}
               productType={props.productType}

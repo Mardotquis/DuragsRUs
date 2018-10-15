@@ -20,11 +20,11 @@ const Product = (props) => {
   }
   return (
     <section className="product__card_admin">
-
+    {console.log(props.productId)}
       <h2 className="product__title_admin ">{props.title}</h2>
 
       <div className="product__middle">
-        <img src={props.imgSrc} className="product__img_admin" alt={props.description} />
+        <img src={props.productImages} className="product__img_admin" alt={props.description} />
         <p className="product__description_admin">{props.description}</p>
 
         <p className="product__price_admin">${props.price}</p>
@@ -43,7 +43,7 @@ const Product = (props) => {
         description={props.description}
         id={formatProductName(props.title)}
         price={props.price}
-        img={props.imgSrc}
+        productImages={props.productImages}
         productType={props.productType}
         formAction={`http://localhost:8080/products/${props.productId}`}
         formMethod={"PUT"}

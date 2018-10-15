@@ -7,14 +7,16 @@ class Form extends Component {
             description: props.description,
             productImages: props.productImages,
             price: props.price,
-            productType: props.productType
+            productType: props.productType,
+            productId: props.productId
         }
     };
+
     handleFormInput = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     }
-    sendData = () => {
-        // e.preventDefault();
+    sendData = (e) => {
+        e.preventDefault();
         const { title, description, productImages, price, productType } = this.state
         let bodyBeingSent = { title, description, productImages, price, productType };
         console.log(`body being sent`, JSON.stringify(bodyBeingSent))
@@ -32,6 +34,7 @@ class Form extends Component {
 
     };
     render() {
+
         return (
             <form className="newProduct" id={this.props.id} onSubmit={this.sendData} >
 
@@ -41,7 +44,7 @@ class Form extends Component {
                 <textarea
                     type="text" id="productDescription" name="description" placeholder={this.props.description} cols="100" onChange={this.handleFormInput} value={this.state.description} />
                 <label htmlFor="productImgSrc">product image source</label>
-                <input type="text" id="productImgSrc" name="productImages" placeholder={this.props.img} onChange={this.handleFormInput} value={this.state.productImages} />
+                <input type="text" id="productImgSrc" name="productImages" placeholder={this.state.productImages} onChange={this.handleFormInput} value={this.state.productImages} />
 
 
                 <label htmlFor="productType">product type</label>
