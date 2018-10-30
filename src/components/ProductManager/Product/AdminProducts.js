@@ -45,7 +45,7 @@ const Product = (props) => {
         price={props.price}
         productImages={props.productImages}
         productType={props.productType}
-        formAction={`https://duragsrus-220620.appspot.com/products/${props.productId}`}
+        formAction={`http://localhost:8080/products/${props.productId}`}
         formMethod={"PUT"}
         productId={props.productId}
         type={'edit'}

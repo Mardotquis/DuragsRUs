@@ -23,7 +23,7 @@ const ProductManager = (props) => {
     console.warn(`clicked`);
     overlay.style.display = ("block");
     if (execute === 'yes') {
-      let url = `https://duragsrus-220620.appspot.com/products/${parseInt(thisId)}`;
+      let url = `http://localhost:8080/products/${parseInt(thisId)}`;
       fetch(url, {
         method: 'DELETE'
       });
@@ -41,7 +41,7 @@ const ProductManager = (props) => {
         <div className="add__product-btn" onClick={() => showFormModal("newForm")}></div>
       </div>
       <div className="formOverlay"></div>
-      <Form formAction="https://duragsrus-220620.appspot.com/products" id={"newForm"} formMethod="POST" />
+      <Form formAction="http://localhost:8080/products" id={"newForm"} formMethod="POST" />
       <div className="products__list_item_admin">
         {props.products.map(quality => {
           return (
