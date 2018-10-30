@@ -7,7 +7,7 @@ class Auth {
             domain: 'mardotquis.auth0.com',
             audience: 'https://mardotquis.auth0.com/userinfo',
             clientID: 'HVlcEP4aEK26Ga2u80WkQFzsAm9uESlA',
-            redirectUri: 'http://localhost:3000/callback',
+            redirectUri: 'https://duragsrus-220620.appspot.com/callback',
             responseType: 'token id_token',
             scope: 'openid profile'
         });
