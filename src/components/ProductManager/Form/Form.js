@@ -19,9 +19,16 @@ class Form extends Component {
         e.preventDefault();
         const { title, description, productImages, price, productType } = this.state
         let bodyBeingSent = { title, description, productImages, price, productType };
+        const errorArray = []
+      for(let element in bodyBeingSent){
+        if(bodyBeingSent[element] === "" ){
+            errorArray.push(element)
+        }
+      }
+      if(errorArray.length === 0){
         console.log(`body being sent`, JSON.stringify(bodyBeingSent))
         let url = this.props.formAction
-        fetch(url, {
+        return fetch(url, {
             method: this.props.formMethod,
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +38,9 @@ class Form extends Component {
             .then(response => response.json())
             .then(data => console.log(data))
             .catch(e => console.log(e))
-
+      }else{
+          return console.log(`errors: ${errorArray}`)
+      }
     };
     render() {
 

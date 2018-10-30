@@ -12,7 +12,7 @@ const Contact = () => {
         <p>Phone Number: <a href="tel:7049999999">(704) 999-9999</a></p>
         <p>Email: <a href="mailto:duragsrus@gmail.com">duragsrus@gmail.com</a></p>
       </div>
-      <form className="contact__form" method="POST" action="http://localhost:8080/contact" required>
+      <form className="contact__form" method="POST" action="https://duragsrus-220620.appspot.com/contact" required>
         <label htmlFor="cusName">Name:</label>
         <input id="cusName" type="text" name="customerName" />
 

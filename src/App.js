@@ -23,7 +23,7 @@ class App extends Component {
     };
   }
    componentDidMount() {
-    const productsFetchUrl = 'http://localhost:8080/products';
+    const productsFetchUrl = 'https://duragsrus-220620.appspot.com/products';
      fetch(productsFetchUrl)
       .then((resp) => resp.json())
       .then((data) => {
@@ -39,7 +39,7 @@ class App extends Component {
         console.warn('ERROR')
         this.setState({ loading: false });
       });
-    const contactFetchUrl = "http://localhost:8080/contact/data";
+    const contactFetchUrl = "https://duragsrus-220620.appspot.com/contact/data";
      fetch(contactFetchUrl)
       .then((resp) => resp.json())
       .then((data) => {
